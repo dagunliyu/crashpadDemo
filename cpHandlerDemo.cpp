@@ -10,10 +10,6 @@
 #include "PreCompiled.h"
 #include <filesystem>
 #include <iostream>
-// #include "client/crash_report_database.h"
-// #include "client/crashpad_client.h"
-// #include "client/settings.h"
-// #include "base/files/file_path.h" //! mini_chromium
 #include <crashpadHandler.h>
 #include <windows.h>
 #include <xlocbuf>
@@ -24,50 +20,20 @@
 #include <utility>
 #include <future>
 #include <vector>
+//#include <iosfwd>
+#include <sstream>
+#include <new.h> // use new 和 bad_alloc
+#include <eh.h>
+#include <cstdlib> // use std::malloc
+#include <csignal> 
+#include <exception>
+#include <iostream>
 #include <util/cpHelper.h>
 
 //#include <unistd.h>
 
 using namespace std;
 //using namespace crashpad;
-
-
-//StringType getExecutableDir() 
-//{
-//	HMODULE hModule = GetModuleHandleW(NULL);
-//	WCHAR path[MAX_PATH];
-//	DWORD retVal = GetModuleFileNameW(hModule, path, MAX_PATH);
-//	if (retVal == 0) return NULL;
-//
-//	wchar_t* lastBackslash = wcsrchr(path, '\\');
-//	if (lastBackslash == NULL) return NULL;
-//	*lastBackslash = 0;
-//
-//	return path;
-//}
-//std::string getExeDirectory()
-//{
-//	wchar_t path[MAX_PATH];
-//	if (!GetModuleFileNameW(NULL, path, MAX_PATH))
-//	{
-//		// Handle error
-//		return "";
-//	}
-//
-//	// Convert wide string to narrow string
-//	const size_t len = wcslen(path);
-//	std::string strPath(len, '\0');
-//	std::use_facet<std::ctype<wchar_t>>(std::locale()).narrow(path, path + len, '?', &strPath[0]);
-//
-//	// Remove the filename part to leave only the directory
-//	const char* lastSlash = strrchr(strPath.c_str(), '\\');
-//	if (lastSlash != nullptr)
-//	{
-//		strPath.erase(lastSlash - strPath.begin());
-//	}
-//
-//	return strPath;
-//}
  
 void crash_fun()
 {    
@@ -90,21 +56,97 @@ std::string GetExecutablePath()
 	return fullPath.substr(0, pos);
 }
 
+#
 int func(bool isCrash)
 {
 	if (isCrash)
 	{
 		std::this_thread::sleep_for(std::chrono::milliseconds(2500));
-		//crash_fun();
-		cpHelper cpHelperObj;
-		cpHelperObj.crash_fun();
+		crash_fun();
+		//cpHelper cpHelperObj;
+		//cpHelperObj.crash_fun();
 	}
-	
 	return 1;
+}
+
+#if defined(LC_WIN)
+// set SEH to cxx exception
+void my_se_translator_filter(unsigned int code, EXCEPTION_POINTERS* pExp)
+{
+	switch (code)
+	{
+	case EXCEPTION_ACCESS_VIOLATION:
+		break;
+	case EXCEPTION_FLT_DIVIDE_BY_ZERO:
+	case EXCEPTION_INT_DIVIDE_BY_ZERO:
+		break;
+	}
+
+	std::stringstream str;
+	str << "SEH exception of type: " << code;
+	throw;
+}
+#endif
+
+void seg_fault_handler(int sig)
+{
+	switch (sig)
+	{
+	case SIGSEGV:
+		std::cerr << "illegal storage access..." << std::endl;
+		throw;
+		//throw Base::AccessViolation("***");
+		break;
+	case SIGABRT:
+		std::cerr << "abnormal program termination..." << std::endl;
+		//throw Base::AbnormalProgramTermination("***");
+		break;
+	default:
+		std::cerr << "unknown error occurred..." << std::endl;
+		break;
+	}
+}
+
+void unhandled_exception_handler()
+{
+	std::cerr << "terminating..." << std::endl;
+}
+
+void unexception_error_handler()
+{
+	std::cerr << "unexpected error occured..." << std::endl;
+}
+
+void initExceptionHandler()
+{
+	// install our own handler
+#ifdef _MSC_VER
+	//_set_new_handler();
+	_set_new_mode(1); // throw bad_alloc while malloc failed
+#endif
+
+	// 
+#ifdef _MSC_VER
+	std::signal(SIGSEGV, seg_fault_handler);
+	std::signal(SIGABRT, seg_fault_handler); 
+	std::set_terminate(unhandled_exception_handler);
+	//std::set_unexcepted(unexception_error_handler);
+
+#define _SE_TRANSLATOR_
+#if defined(_SE_TRANSLATOR_)
+	_set_se_translator(my_se_translator_filter);
+#endif
+
+#elif defined(_OS_LINUX)
+	std::signal(SIGSEGV, );
+#endif
+
 }
 
 int main()
 { 
+	initExceptionHandler();
+
     //std::cout << "当前程序路径：" << path << std::endl;
     std::cout << "Hello World!\n";
 	//QString appDirPath = QCoreApplication::applicationDirPath();
@@ -133,12 +175,15 @@ int main()
 	 
 	try
 	{
-		std::packaged_task<int(bool)> pkTask(func);
-		//std::packaged_task<int(cpHelper&,bool)> pkTask(&cpHelper::func);
-		std::future<int> fut = pkTask.get_future();
+		//std::packaged_task<int(bool)> pkTask(func);
+		////std::packaged_task<int(cpHelper&,bool)> pkTask(&cpHelper::func);
+		//std::future<int> fut = pkTask.get_future();
+		//std::thread(std::move(pkTask), true).detach();
+		//int val = fut.get();
 
-		std::thread(std::move(pkTask), true).detach();
-		int val = fut.get();
+		const auto p = static_cast<int*>(nullptr);
+		*p = 1;
+		//func(true);
 	}
 	catch (const std::exception&)
 	{
