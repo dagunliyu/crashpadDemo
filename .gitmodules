@@ -1,0 +1,3 @@
+[submodule "thirdParty/crashpad"]
+	path = thirdParty/crashpad
+	url = https://github.com/dagunliyu/crashpad-prebuilts.git
