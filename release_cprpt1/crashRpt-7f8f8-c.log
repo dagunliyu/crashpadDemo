@@ -1,0 +1,533 @@
+Operating system: Windows NT
+                  10.0.19041 4597
+CPU: amd64
+     family 6 model 167 stepping 1
+     16 CPUs
+
+GPU: UNKNOWN
+
+Crash reason:  EXCEPTION_ACCESS_VIOLATION_WRITE
+Crash address: 0x0
+Process uptime: 3 seconds
+
+Thread 0 (crashed)
+ 0  crashpadReporterExample.exe + 0x19760
+    rax = 0x0000000000000000   rdx = 0x0000000000000000
+    rcx = 0x0000003c2d8ffde8   rbx = 0x0000000000000001
+    rsi = 0x000001d201a87901   rdi = 0x000001d201b18670
+    rbp = 0x0000003c2d8fb3e0   rsp = 0x0000003c2d8fb250
+     r8 = 0x0000000000000000    r9 = 0x0000003c2d8fb450
+    r10 = 0x00007ffc6e47e9d8   r11 = 0x0000003c2d8fb1d0
+    r12 = 0x0000000000000009   r13 = 0x0000003c2d8ffde8
+    r14 = 0x0000003c2d8fb450   r15 = 0x000001d201b06f50
+    rip = 0x00007ff7de2e9760
+    Found by: given as instruction pointer in context
+ 1  crashpadReporterExample.exe + 0x193ee
+    rbp = 0x0000003c2d8fb3e0   rsp = 0x0000003c2d8fb270
+    rip = 0x00007ff7de2e93ee
+    Found by: stack scanning
+ 2  Qt5Widgets.dll + 0x205b1
+    rbp = 0x0000003c2d8fb3e0   rsp = 0x0000003c2d8fb280
+    rip = 0x00007ffc6da005b1
+    Found by: stack scanning
+ 3  crashpadReporterExample.exe + 0x1aed1
+    rbp = 0x0000003c2d8fb3e0   rsp = 0x0000003c2d8fb2a0
+    rip = 0x00007ff7de2eaed1
+    Found by: stack scanning
+ 4  Qt5Core.dll + 0x250aa
+    rbp = 0x0000003c2d8fb3e0   rsp = 0x0000003c2d8fb2b0
+    rip = 0x00007ffc6df550aa
+    Found by: stack scanning
+ 5  Qt5Core.dll + 0x1f1da7
+    rbp = 0x0000003c2d8fb3e0   rsp = 0x0000003c2d8fb2e0
+    rip = 0x00007ffc6e121da7
+    Found by: stack scanning
+ 6  Qt5Widgets.dll + 0x1b022
+    rbp = 0x0000003c2d8fb3e0   rsp = 0x0000003c2d8fb310
+    rip = 0x00007ffc6d9fb022
+    Found by: stack scanning
+ 7  Qt5Widgets.dll + 0x4b031
+    rbp = 0x0000003c2d8fb3e0   rsp = 0x0000003c2d8fb390
+    rip = 0x00007ffc6da2b031
+    Found by: stack scanning
+ 8  Qt5Widgets.dll + 0x4b031
+    rsp = 0x0000003c2d8fb3f0   rip = 0x00007ffc6da2b031
+    Found by: stack scanning
+ 9  Qt5Widgets.dll + 0xdeca7
+    rsp = 0x0000003c2d8fb430   rip = 0x00007ffc6dabeca7
+    Found by: stack scanning
+10  Qt5Widgets.dll + 0xdebc8
+    rsp = 0x0000003c2d8fb470   rip = 0x00007ffc6dabebc8
+    Found by: stack scanning
+11  Qt5Widgets.dll + 0xdf8ad
+    rsp = 0x0000003c2d8fb4a0   rip = 0x00007ffc6dabf8ad
+    Found by: stack scanning
+12  ucrtbase.dll + 0x15f58
+    rsp = 0x0000003c2d8fb4c0   rip = 0x00007ffd2c3d5f58
+    Found by: stack scanning
+13  Qt5Widgets.dll + 0x379b2
+    rsp = 0x0000003c2d8fb4d0   rip = 0x00007ffc6da179b2
+    Found by: stack scanning
+14  Qt5Core.dll + 0x1d4a32
+    rsp = 0x0000003c2d8fb500   rip = 0x00007ffc6e104a32
+    Found by: stack scanning
+15  Qt5Core.dll + 0x1d535b
+    rsp = 0x0000003c2d8fb530   rip = 0x00007ffc6e10535b
+    Found by: stack scanning
+16  Qt5Widgets.dll + 0x14990
+    rsp = 0x0000003c2d8fb560   rip = 0x00007ffc6d9f4990
+    Found by: stack scanning
+17  Qt5Widgets.dll + 0x128b0
+    rsp = 0x0000003c2d8fb590   rip = 0x00007ffc6d9f28b0
+    Found by: stack scanning
+18  OneCoreCommonProxyStub.dll + 0x26708
+    rsp = 0x0000003c2d8fb5e0   rip = 0x00007ffd0f5e6708
+    Found by: stack scanning
+19  UIAutomationCore.dll + 0x3cb0
+    rsp = 0x0000003c2d8fb5f0   rip = 0x00007ffceef33cb0
+    Found by: stack scanning
+20  RPCRT4.dll + 0xdcf0c
+    rsp = 0x0000003c2d8fb600   rip = 0x00007ffd2c82cf0c
+    Found by: stack scanning
+21  OneCoreCommonProxyStub.dll + 0x26700
+    rsp = 0x0000003c2d8fb618   rip = 0x00007ffd0f5e6700
+    Found by: stack scanning
+22  OneCoreCommonProxyStub.dll + 0x266d0
+    rsp = 0x0000003c2d8fb650   rip = 0x00007ffd0f5e66d0
+    Found by: stack scanning
+23  OneCoreCommonProxyStub.dll + 0x266d0
+    rsp = 0x0000003c2d8fb658   rip = 0x00007ffd0f5e66d0
+    Found by: stack scanning
+24  OneCoreCommonProxyStub.dll + 0x26718
+    rsp = 0x0000003c2d8fb660   rip = 0x00007ffd0f5e6718
+    Found by: stack scanning
+25  OneCoreCommonProxyStub.dll + 0x266d0
+    rsp = 0x0000003c2d8fb688   rip = 0x00007ffd0f5e66d0
+    Found by: stack scanning
+26  RPCRT4.dll + 0xdc4d4
+    rsp = 0x0000003c2d8fb6c0   rip = 0x00007ffd2c82c4d4
+    Found by: stack scanning
+27  OneCoreCommonProxyStub.dll + 0x266e8
+    rsp = 0x0000003c2d8fb6d8   rip = 0x00007ffd0f5e66e8
+    Found by: stack scanning
+28  ntdll.dll + 0x25d6f
+    rsp = 0x0000003c2d8fb720   rip = 0x00007ffd2e4b5d6f
+    Found by: stack scanning
+29  OneCoreCommonProxyStub.dll + 0x266d0
+    rsp = 0x0000003c2d8fb760   rip = 0x00007ffd0f5e66d0
+    Found by: stack scanning
+30  OneCoreCommonProxyStub.dll + 0x266d0
+    rsp = 0x0000003c2d8fb768   rip = 0x00007ffd0f5e66d0
+    Found by: stack scanning
+31  UIAutomationCore.dll + 0x4b7b
+    rsp = 0x0000003c2d8fb770   rip = 0x00007ffceef34b7b
+    Found by: stack scanning
+32  OneCoreCommonProxyStub.dll + 0x266e8
+    rsp = 0x0000003c2d8fb778   rip = 0x00007ffd0f5e66e8
+    Found by: stack scanning
+33  OneCoreCommonProxyStub.dll + 0x266e8
+    rsp = 0x0000003c2d8fb788   rip = 0x00007ffd0f5e66e8
+    Found by: stack scanning
+34  OneCoreCommonProxyStub.dll + 0x266d0
+    rsp = 0x0000003c2d8fb7a0   rip = 0x00007ffd0f5e66d0
+    Found by: stack scanning
+35  combase.dll + 0x24f620
+    rsp = 0x0000003c2d8fb7d0   rip = 0x00007ffd2e05f620
+    Found by: stack scanning
+36  OneCoreCommonProxyStub.dll + 0x267d0
+    rsp = 0x0000003c2d8fb818   rip = 0x00007ffd0f5e67d0
+    Found by: stack scanning
+37  UIAutomationCore.dll + 0x1fcaf8
+    rsp = 0x0000003c2d8fb828   rip = 0x00007ffcef12caf8
+    Found by: stack scanning
+38  OneCoreCommonProxyStub.dll + 0x266d0
+    rsp = 0x0000003c2d8fb840   rip = 0x00007ffd0f5e66d0
+    Found by: stack scanning
+39  ntdll.dll + 0x25ba1
+    rsp = 0x0000003c2d8fb8d0   rip = 0x00007ffd2e4b5ba1
+    Found by: stack scanning
+40  OneCoreCommonProxyStub.dll + 0x44e0
+    rsp = 0x0000003c2d8fb8e0   rip = 0x00007ffd0f5c44e0
+    Found by: stack scanning
+41  OneCoreCommonProxyStub.dll + 0x43c0
+    rsp = 0x0000003c2d8fb8e8   rip = 0x00007ffd0f5c43c0
+    Found by: stack scanning
+42  ntdll.dll + 0x25ba1
+    rsp = 0x0000003c2d8fb900   rip = 0x00007ffd2e4b5ba1
+    Found by: stack scanning
+43  OneCoreCommonProxyStub.dll + 0x5bb0
+    rsp = 0x0000003c2d8fb910   rip = 0x00007ffd0f5c5bb0
+    Found by: stack scanning
+44  Qt5Gui.dll + 0x2ebe0
+    rsp = 0x0000003c2d8fb960   rip = 0x00007ffc6e52ebe0
+    Found by: stack scanning
+45  Qt5Gui.dll + 0x28a20a
+    rsp = 0x0000003c2d8fb9a0   rip = 0x00007ffc6e78a20a
+    Found by: stack scanning
+46  Qt5Gui.dll + 0x4b0b2
+    rsp = 0x0000003c2d8fb9b0   rip = 0x00007ffc6e54b0b2
+    Found by: stack scanning
+47  Qt5Gui.dll + 0x3fd0e0
+    rsp = 0x0000003c2d8fb9f8   rip = 0x00007ffc6e8fd0e0
+    Found by: stack scanning
+48  Qt5Core.dll + 0x1d2aca
+    rsp = 0x0000003c2d8fbad0   rip = 0x00007ffc6e102aca
+    Found by: stack scanning
+49  Qt5Widgets.dll + 0x501650
+    rsp = 0x0000003c2d8fbb30   rip = 0x00007ffc6dee1650
+    Found by: stack scanning
+50  Qt5Widgets.dll + 0x15b95
+    rsp = 0x0000003c2d8fbb40   rip = 0x00007ffc6d9f5b95
+    Found by: stack scanning
+51  Qt5Widgets.dll + 0x6040a
+    rsp = 0x0000003c2d8fbc00   rip = 0x00007ffc6da4040a
+    Found by: stack scanning
+52  Qt5Widgets.dll + 0x501601
+    rsp = 0x0000003c2d8fbc28   rip = 0x00007ffc6dee1601
+    Found by: stack scanning
+53  Qt5Widgets.dll + 0x501650
+    rsp = 0x0000003c2d8fbc30   rip = 0x00007ffc6dee1650
+    Found by: stack scanning
+54  Qt5Widgets.dll + 0xc66ee
+    rsp = 0x0000003c2d8fbcc0   rip = 0x00007ffc6daa66ee
+    Found by: stack scanning
+55  ntdll.dll + 0x247b1
+    rsp = 0x0000003c2d8fbd00   rip = 0x00007ffd2e4b47b1
+    Found by: stack scanning
+56  RPCRT4.dll + 0x119e9
+    rsp = 0x0000003c2d8fbd80   rip = 0x00007ffd2c7619e9
+    Found by: stack scanning
+57  combase.dll + 0xbe47b
+    rsp = 0x0000003c2d8fbda0   rip = 0x00007ffd2dece47b
+    Found by: stack scanning
+58  UIAutomationCore.dll + 0x1fcaf8
+    rsp = 0x0000003c2d8fbda8   rip = 0x00007ffcef12caf8
+    Found by: stack scanning
+59  OneCoreCommonProxyStub.dll + 0x5b60
+    rsp = 0x0000003c2d8fbdb0   rip = 0x00007ffd0f5c5b60
+    Found by: stack scanning
+60  UIAutomationCore.dll + 0x1fcaf8
+    rsp = 0x0000003c2d8fbdc8   rip = 0x00007ffcef12caf8
+    Found by: stack scanning
+61  Qt5Widgets.dll + 0x14990
+    rsp = 0x0000003c2d8fbdd0   rip = 0x00007ffc6d9f4990
+    Found by: stack scanning
+62  combase.dll + 0xbc490
+    rsp = 0x0000003c2d8fbde0   rip = 0x00007ffd2decc490
+    Found by: stack scanning
+63  OneCoreCommonProxyStub.dll + 0x267d0
+    rsp = 0x0000003c2d8fbdf8   rip = 0x00007ffd0f5e67d0
+    Found by: stack scanning
+64  RPCRT4.dll + 0x5d17b
+    rsp = 0x0000003c2d8fbe20   rip = 0x00007ffd2c7ad17b
+    Found by: stack scanning
+65  combase.dll + 0xb811b
+    rsp = 0x0000003c2d8fbe50   rip = 0x00007ffd2dec811b
+    Found by: stack scanning
+66  Qt5Gui.dll + 0x3fd0e0
+    rsp = 0x0000003c2d8fbe68   rip = 0x00007ffc6e8fd0e0
+    Found by: stack scanning
+67  Qt5Widgets.dll + 0xc66ee
+    rsp = 0x0000003c2d8fbf50   rip = 0x00007ffc6daa66ee
+    Found by: stack scanning
+68  Qt5Widgets.dll + 0x5e38e
+    rsp = 0x0000003c2d8fbf90   rip = 0x00007ffc6da3e38e
+    Found by: stack scanning
+69  qwindows.dll + 0x14a0e
+    rsp = 0x0000003c2d8fbfb0   rip = 0x00007ffcf50b4a0e
+    Found by: stack scanning
+70  Qt5Core.dll + 0x2f1c90
+    rsp = 0x0000003c2d8fbfe8   rip = 0x00007ffc6e221c90
+    Found by: stack scanning
+71  Qt5Core.dll + 0x1d4a32
+    rsp = 0x0000003c2d8fc000   rip = 0x00007ffc6e104a32
+    Found by: stack scanning
+72  Qt5Core.dll + 0x24f87
+    rsp = 0x0000003c2d8fc010   rip = 0x00007ffc6df54f87
+    Found by: stack scanning
+73  RPCRT4.dll + 0x5d1d3
+    rsp = 0x0000003c2d8fc020   rip = 0x00007ffd2c7ad1d3
+    Found by: stack scanning
+74  Qt5Core.dll + 0x1d535b
+    rsp = 0x0000003c2d8fc030   rip = 0x00007ffc6e10535b
+    Found by: stack scanning
+75  Qt5Widgets.dll + 0x14990
+    rsp = 0x0000003c2d8fc060   rip = 0x00007ffc6d9f4990
+    Found by: stack scanning
+76  Qt5Widgets.dll + 0x13a13
+    rsp = 0x0000003c2d8fc090   rip = 0x00007ffc6d9f3a13
+    Found by: stack scanning
+77  combase.dll + 0x273628
+    rsp = 0x0000003c2d8fc140   rip = 0x00007ffd2e083628
+    Found by: stack scanning
+78  combase.dll + 0x273608
+    rsp = 0x0000003c2d8fc148   rip = 0x00007ffd2e083608
+    Found by: stack scanning
+79  KERNELBASE.dll + 0x6e0fd
+    rsp = 0x0000003c2d8fc190   rip = 0x00007ffd2bc4e0fd
+    Found by: stack scanning
+80  UIAutomationCore.dll + 0x3cc70
+    rsp = 0x0000003c2d8fc1a0   rip = 0x00007ffceef6cc70
+    Found by: stack scanning
+81  ntdll.dll + 0x2b86b
+    rsp = 0x0000003c2d8fc1d0   rip = 0x00007ffd2e4bb86b
+    Found by: stack scanning
+82  ntdll.dll + 0x2b3c7
+    rsp = 0x0000003c2d8fc290   rip = 0x00007ffd2e4bb3c7
+    Found by: stack scanning
+83  USER32.dll + 0x2164b
+    rsp = 0x0000003c2d8fc2c0   rip = 0x00007ffd2dbd164b
+    Found by: stack scanning
+84  qwindows.dll + 0x145f0
+    rsp = 0x0000003c2d8fc2e8   rip = 0x00007ffcf50b45f0
+    Found by: stack scanning
+85  combase.dll + 0x55a56
+    rsp = 0x0000003c2d8fc2f0   rip = 0x00007ffd2de65a56
+    Found by: stack scanning
+86  combase.dll + 0xfa495
+    rsp = 0x0000003c2d8fc310   rip = 0x00007ffd2df0a495
+    Found by: stack scanning
+87  ntdll.dll + 0x25ba1
+    rsp = 0x0000003c2d8fc320   rip = 0x00007ffd2e4b5ba1
+    Found by: stack scanning
+88  USER32.dll + 0x21b64
+    rsp = 0x0000003c2d8fc340   rip = 0x00007ffd2dbd1b64
+    Found by: stack scanning
+89  combase.dll + 0x6774d
+    rsp = 0x0000003c2d8fc3a0   rip = 0x00007ffd2de7774d
+    Found by: stack scanning
+90  ntdll.dll + 0x247b1
+    rsp = 0x0000003c2d8fc3e0   rip = 0x00007ffd2e4b47b1
+    Found by: stack scanning
+91  combase.dll + 0x2dd2e
+    rsp = 0x0000003c2d8fc3f0   rip = 0x00007ffd2de3dd2e
+    Found by: stack scanning
+92  combase.dll + 0x2ef9d
+    rsp = 0x0000003c2d8fc420   rip = 0x00007ffd2de3ef9d
+    Found by: stack scanning
+93  Qt5Core.dll + 0x24f87
+    rsp = 0x0000003c2d8fc530   rip = 0x00007ffc6df54f87
+    Found by: stack scanning
+94  USER32.dll + 0x24760
+    rsp = 0x0000003c2d8fc570   rip = 0x00007ffd2dbd4760
+    Found by: stack scanning
+95  Qt5Core.dll + 0x1d2aca
+    rsp = 0x0000003c2d8fc5d0   rip = 0x00007ffc6e102aca
+    Found by: stack scanning
+96  USER32.dll + 0x21906
+    rsp = 0x0000003c2d8fc5e0   rip = 0x00007ffd2dbd1906
+    Found by: stack scanning
+97  Qt5Gui.dll + 0x432b6
+    rsp = 0x0000003c2d8fc640   rip = 0x00007ffc6e5432b6
+    Found by: stack scanning
+98  win32u.dll + 0x1404
+    rsp = 0x0000003c2d8fc748   rip = 0x00007ffd2bee1404
+    Found by: stack scanning
+99  Qt5Core.dll + 0x21c0a0
+    rsp = 0x0000003c2d8fc780   rip = 0x00007ffc6e14c0a0
+    Found by: stack scanning
+100  ntdll.dll + 0x9d410
+    rsp = 0x0000003c2d8fc788   rip = 0x00007ffd2e52d410
+    Found by: stack scanning
+101  USER32.dll + 0x2107
+    rsp = 0x0000003c2d8fc7d0   rip = 0x00007ffd2dbb2107
+    Found by: stack scanning
+102  UIAutomationCore.dll + 0x49fd
+    rsp = 0x0000003c2d8fc7f0   rip = 0x00007ffceef349fd
+    Found by: stack scanning
+103  UIAutomationCore.dll + 0x49b5
+    rsp = 0x0000003c2d8fc820   rip = 0x00007ffceef349b5
+    Found by: stack scanning
+104  USER32.dll + 0x21906
+    rsp = 0x0000003c2d8fc850   rip = 0x00007ffd2dbd1906
+    Found by: stack scanning
+105  UIAutomationCore.dll + 0x4960
+    rsp = 0x0000003c2d8fc860   rip = 0x00007ffceef34960
+    Found by: stack scanning
+106  USER32.dll + 0x1eda9
+    rsp = 0x0000003c2d8fc8e0   rip = 0x00007ffd2dbceda9
+    Found by: stack scanning
+107  USER32.dll + 0xf163
+    rsp = 0x0000003c2d8fc910   rip = 0x00007ffd2dbbf163
+    Found by: stack scanning
+108  USER32.dll + 0x1ed57
+    rsp = 0x0000003c2d8fc930   rip = 0x00007ffd2dbced57
+    Found by: stack scanning
+109  USER32.dll + 0x16b6
+    rsp = 0x0000003c2d8fc940   rip = 0x00007ffd2dbb16b6
+    Found by: stack scanning
+110  Qt5Gui.dll + 0x3fd0e0
+    rsp = 0x0000003c2d8fc948   rip = 0x00007ffc6e8fd0e0
+    Found by: stack scanning
+111  Qt5Core.dll + 0x3dbd68
+    rsp = 0x0000003c2d8fc9b8   rip = 0x00007ffc6e30bd68
+    Found by: stack scanning
+112  KERNELBASE.dll + 0x2e0003
+    rsp = 0x0000003c2d8fc9c8   rip = 0x00007ffd2bec0003
+    Found by: stack scanning
+113  Qt5Core.dll + 0x1d4907
+    rsp = 0x0000003c2d8fca30   rip = 0x00007ffc6e104907
+    Found by: stack scanning
+114  USER32.dll + 0xa333
+    rsp = 0x0000003c2d8fca40   rip = 0x00007ffd2dbba333
+    Found by: stack scanning
+115  USER32.dll + 0xec01
+    rsp = 0x0000003c2d8fca60   rip = 0x00007ffd2dbbec01
+    Found by: stack scanning
+116  Qt5Gui.dll + 0x66e140
+    rsp = 0x0000003c2d8fca88   rip = 0x00007ffc6eb6e140
+    Found by: stack scanning
+117  Qt5Core.dll + 0x66040
+    rsp = 0x0000003c2d8fca90   rip = 0x00007ffc6df96040
+    Found by: stack scanning
+118  USER32.dll + 0xe684
+    rsp = 0x0000003c2d8fcaa0   rip = 0x00007ffd2dbbe684
+    Found by: stack scanning
+119  Qt5Gui.dll + 0x66e148
+    rsp = 0x0000003c2d8fcae8   rip = 0x00007ffc6eb6e148
+    Found by: stack scanning
+120  Qt5Gui.dll + 0x2ecb0
+    rsp = 0x0000003c2d8fcaf0   rip = 0x00007ffc6e52ecb0
+    Found by: stack scanning
+121  Qt5Gui.dll + 0x66e148
+    rsp = 0x0000003c2d8fcaf8   rip = 0x00007ffc6eb6e148
+    Found by: stack scanning
+122  Qt5Core.dll + 0x21ba5a
+    rsp = 0x0000003c2d8fcb20   rip = 0x00007ffc6e14ba5a
+    Found by: stack scanning
+123  Qt5Gui.dll + 0x66e148
+    rsp = 0x0000003c2d8fcb30   rip = 0x00007ffc6eb6e148
+    Found by: stack scanning
+124  ntdll.dll + 0x1d23b
+    rsp = 0x0000003c2d8fcbb0   rip = 0x00007ffd2e4ad23b
+    Found by: stack scanning
+125  ntdll.dll + 0x68ea0
+    rsp = 0x0000003c2d8fcbd8   rip = 0x00007ffd2e4f8ea0
+    Found by: stack scanning
+126  MSCTF.dll + 0x6d270
+    rsp = 0x0000003c2d8fcc30   rip = 0x00007ffd2c68d270
+    Found by: stack scanning
+127  ntdll.dll + 0x1c7bc
+    rsp = 0x0000003c2d8fcc50   rip = 0x00007ffd2e4ac7bc
+    Found by: stack scanning
+128  gdi32full.dll + 0xe5e3
+    rsp = 0x0000003c2d8fccf0   rip = 0x00007ffd2c1fe5e3
+    Found by: stack scanning
+129  ntdll.dll + 0x1c3c8
+    rsp = 0x0000003c2d8fcd10   rip = 0x00007ffd2e4ac3c8
+    Found by: stack scanning
+130  ntdll.dll + 0x2b90b
+    rsp = 0x0000003c2d8fcd80   rip = 0x00007ffd2e4bb90b
+    Found by: stack scanning
+131  ntdll.dll + 0x2b3c7
+    rsp = 0x0000003c2d8fce40   rip = 0x00007ffd2e4bb3c7
+    Found by: stack scanning
+132  USER32.dll + 0xbc6e8
+    rsp = 0x0000003c2d8fceb8   rip = 0x00007ffd2dc6c6e8
+    Found by: stack scanning
+133  USER32.dll + 0x19d164
+    rsp = 0x0000003c2d8fcec0   rip = 0x00007ffd2dd4d164
+    Found by: stack scanning
+134  USER32.dll + 0x19d18c
+    rsp = 0x0000003c2d8fcec8   rip = 0x00007ffd2dd4d18c
+    Found by: stack scanning
+135  ntdll.dll + 0x34c18
+    rsp = 0x0000003c2d8fcf00   rip = 0x00007ffd2e4c4c18
+    Found by: stack scanning
+136  ntdll.dll + 0x2df4c
+    rsp = 0x0000003c2d8fcf10   rip = 0x00007ffd2e4bdf4c
+    Found by: stack scanning
+137  ntdll.dll + 0x26491
+    rsp = 0x0000003c2d8fcfc0   rip = 0x00007ffd2e4b6491
+    Found by: stack scanning
+
+Loaded modules:
+0x10000000 - 0x1059bfff  Resource.dll  0.0.0.0
+0x1d201c00000 - 0x1d201cacfff  shcore.dll  10.0.19041.4522
+0x1d206380000 - 0x1d2063e8fff  WINTRUST.DLL  10.0.19041.4597
+0x7ff7de2d0000 - 0x7ff7de302fff  crashpadReporterExample.exe  0.0.0.0  (main)  (WARNING: No symbols, crashpadReporterExample.pdb, 506E1250BCEE48C1807A06E7A3A4EB511)
+0x7ffc6d9e0000 - 0x7ffc6df20fff  Qt5Widgets.dll  5.15.2.0  (WARNING: No symbols, Qt5Widgets.pdb, B55E00034D784710A266E5590C2A6AB61)
+0x7ffc6df30000 - 0x7ffc6e4f5fff  Qt5Core.dll  5.15.2.0  (WARNING: No symbols, Qt5Core.pdb, 3F04C67A012B43E395533C3A7E3358891)
+0x7ffc6e500000 - 0x7ffc6ebbafff  Qt5Gui.dll  5.15.2.0  (WARNING: No symbols, Qt5Gui.pdb, B9BF1F54552D43FA942F1A753D892E8F1)
+0x7ffcccc40000 - 0x7ffccce0ffff  d3d9.dll  10.0.19041.4597
+0x7ffcd8f90000 - 0x7ffcd926ffff  PicFace64.dll  1.1.0.2326
+0x7ffce70a0000 - 0x7ffce7f34fff  SogouPY.ime  14.5.0.9485  (WARNING: No symbols, SogouPy64.pdb, 955C4380A9C2417189114A76BA516A2810)
+0x7ffce7f40000 - 0x7ffce83c2fff  SogouTSF.ime  14.5.0.9485
+0x7ffceef30000 - 0x7ffcef224fff  UIAutomationCore.dll  7.2.19041.4355  (WARNING: No symbols, UIAutomationCore.pdb, 345A91CAC2D1ABE4707FC0C6BB4BBF3B1)
+0x7ffcf3100000 - 0x7ffcf313dfff  dataexchange.dll  10.0.19041.4355
+0x7ffcf50a0000 - 0x7ffcf520cfff  qwindows.dll  5.15.2.0  (WARNING: No symbols, qwindows.pdb, 7EA3E8B92968441C87182EBCDBB0915C1)
+0x7ffd0bd10000 - 0x7ffd0bd43fff  dbgcore.DLL  10.0.19041.4355
+0x7ffd0d2e0000 - 0x7ffd0d36dfff  MSVCP140.dll  14.36.32532.0
+0x7ffd0e480000 - 0x7ffd0e498fff  NETAPI32.dll  10.0.19041.3636
+0x7ffd0e4b0000 - 0x7ffd0e4bbfff  VCRUNTIME140_1.dll  14.36.32532.0
+0x7ffd0e4d0000 - 0x7ffd0e4eafff  VCRUNTIME140.dll  14.36.32532.0
+0x7ffd0f5c0000 - 0x7ffd0f63efff  OneCoreCommonProxyStub.dll  10.0.19041.4597  (WARNING: No symbols, OneCoreCommonProxyStub.pdb, FC1974E85CF9D66CA92D7AF4D11ABC1E1)
+0x7ffd10cd0000 - 0x7ffd10d35fff  OLEACC.dll  7.2.19041.3636
+0x7ffd10e20000 - 0x7ffd10e26fff  MSIMG32.dll  10.0.19041.3636
+0x7ffd10e30000 - 0x7ffd110c9fff  COMCTL32.dll  6.10.19041.4355
+0x7ffd11ac0000 - 0x7ffd11ae5fff  qwindowsvistastyle.dll  5.15.2.0
+0x7ffd11b10000 - 0x7ffd11b18fff  MSVCP140_1.dll  14.36.32532.0
+0x7ffd128a0000 - 0x7ffd1294bfff  TextShaping.dll  0.0.0.0
+0x7ffd14fe0000 - 0x7ffd1525efff  dwrite.dll  10.0.19041.4355
+0x7ffd15e00000 - 0x7ffd15e27fff  SRVCLI.DLL  10.0.19041.3636
+0x7ffd16ae0000 - 0x7ffd16b06fff  WINMM.dll  10.0.19041.3636  (WARNING: No symbols, winmm.pdb, 8D40E7A52F1C62DF7F80732B0CD76AD81)
+0x7ffd1f200000 - 0x7ffd1f230fff  cryptnet.dll  10.0.19041.3636
+0x7ffd1f650000 - 0x7ffd1f748fff  textinputframework.dll  10.0.19041.4651
+0x7ffd234b0000 - 0x7ffd236b2fff  twinapi.appcore.dll  10.0.19041.4597
+0x7ffd25570000 - 0x7ffd25679fff  WINHTTP.dll  10.0.19041.4355
+0x7ffd25a60000 - 0x7ffd25a69fff  VERSION.dll  10.0.19041.3636
+0x7ffd25f20000 - 0x7ffd25f33fff  WTSAPI32.dll  10.0.19041.3636
+0x7ffd26100000 - 0x7ffd2611cfff  MPR.dll  10.0.19041.3636
+0x7ffd26820000 - 0x7ffd26a82fff  d3d11.dll  10.0.19041.4355
+0x7ffd271c0000 - 0x7ffd2751afff  CoreUIComponents.dll  10.0.19041.3636
+0x7ffd27520000 - 0x7ffd27703fff  dcomp.dll  10.0.19041.4597
+0x7ffd27720000 - 0x7ffd27811fff  CoreMessaging.dll  10.0.19041.4355
+0x7ffd28050000 - 0x7ffd280e3fff  apphelp.dll  10.0.19041.4597
+0x7ffd28490000 - 0x7ffd285e6fff  wintypes.dll  10.0.19041.4355
+0x7ffd28970000 - 0x7ffd28a65fff  PROPSYS.dll  7.0.19041.4597
+0x7ffd29150000 - 0x7ffd291edfff  UxTheme.dll  10.0.19041.4529
+0x7ffd29420000 - 0x7ffd2944efff  dwmapi.dll  10.0.19041.4355
+0x7ffd298d0000 - 0x7ffd2a06dfff  windows.storage.dll  10.0.19041.4648
+0x7ffd2a070000 - 0x7ffd2a253fff  DbgHelp.dll  10.0.19041.3636
+0x7ffd2a2f0000 - 0x7ffd2a301fff  kernel.appcore.dll  10.0.19041.3758
+0x7ffd2a310000 - 0x7ffd2a404fff  dxgi.dll  10.0.19041.4597
+0x7ffd2aac0000 - 0x7ffd2aaf3fff  rsaenh.dll  10.0.19041.3636
+0x7ffd2abe0000 - 0x7ffd2ac12fff  ntmarta.dll  10.0.19041.3636
+0x7ffd2af90000 - 0x7ffd2afa1fff  UMPDC.dll  0.0.0.0
+0x7ffd2b000000 - 0x7ffd2b00bfff  NETUTILS.DLL  10.0.19041.3636
+0x7ffd2b020000 - 0x7ffd2b06afff  powrprof.dll  10.0.19041.3636
+0x7ffd2b380000 - 0x7ffd2b38bfff  CRYPTBASE.DLL  10.0.19041.3636
+0x7ffd2b410000 - 0x7ffd2b43dfff  Wldp.dll  10.0.19041.4597
+0x7ffd2b450000 - 0x7ffd2b467fff  CRYPTSP.dll  10.0.19041.3636
+0x7ffd2b680000 - 0x7ffd2b691fff  msasn1.dll  10.0.19041.3636
+0x7ffd2b9b0000 - 0x7ffd2b9ddfff  USERENV.dll  10.0.19041.4355
+0x7ffd2ba00000 - 0x7ffd2ba23fff  profapi.dll  10.0.19041.4355
+0x7ffd2bad0000 - 0x7ffd2bb3dfff  dtrampo.dll  4.0.0.0  (WARNING: No symbols, dtrampo-x64.pdb, 96AFD0B172BB43608DB3A7CDCEC1B1EA1)
+0x7ffd2bbb0000 - 0x7ffd2bbd6fff  bcrypt.dll  10.0.19041.3636
+0x7ffd2bbe0000 - 0x7ffd2bed5fff  KERNELBASE.dll  10.0.19041.4648  (WARNING: No symbols, kernelbase.pdb, FD00366E659CCAC64FA32290CA0C38AA1)
+0x7ffd2bee0000 - 0x7ffd2bf01fff  win32u.dll  10.0.19041.4648  (WARNING: No symbols, win32u.pdb, 81FA8AA54C62B940172A87110CE2238A1)
+0x7ffd2bf10000 - 0x7ffd2c06dfff  CRYPT32.dll  10.0.19041.4597
+0x7ffd2c070000 - 0x7ffd2c0f1fff  bcryptPrimitives.dll  10.0.19041.3636  (WARNING: No symbols, bcryptprimitives.pdb, C5929C77617AD1E4CAB41186FA7BE4AC1)
+0x7ffd2c100000 - 0x7ffd2c19cfff  msvcp_win.dll  10.0.19041.3636
+0x7ffd2c1f0000 - 0x7ffd2c306fff  gdi32full.dll  10.0.19041.4474  (WARNING: No symbols, gdi32full.pdb, 7411CC311D75DDE3629BA21E45D351AD1)
+0x7ffd2c3c0000 - 0x7ffd2c4bffff  ucrtbase.dll  10.0.19041.3636  (WARNING: No symbols, ucrtbase.pdb, 5C4F64BF99F5FDEC7295CAB05A30010D1)
+0x7ffd2c540000 - 0x7ffd2c619fff  COMDLG32.dll  10.0.19041.4355
+0x7ffd2c620000 - 0x7ffd2c733fff  MSCTF.dll  10.0.19041.4597  (WARNING: No symbols, msctf.pdb, AEB43A8194CEF45010F716CEC85410F41)
+0x7ffd2c750000 - 0x7ffd2c872fff  RPCRT4.dll  10.0.19041.4597  (WARNING: No symbols, rpcrt4.pdb, 2DBFD9784C0C5801E00B9ED7344C98641)
+0x7ffd2c880000 - 0x7ffd2c91dfff  msvcrt.dll  7.0.19041.3636
+0x7ffd2c980000 - 0x7ffd2ca28fff  clbcatq.dll  2001.12.10941.16384
+0x7ffd2ca30000 - 0x7ffd2d19bfff  SHELL32.dll  10.0.19041.4648
+0x7ffd2d200000 - 0x7ffd2d21cfff  imagehlp.dll  10.0.19041.3636
+0x7ffd2d220000 - 0x7ffd2d2ecfff  OLEAUT32.dll  10.0.19041.3636
+0x7ffd2d300000 - 0x7ffd2d307fff  PSAPI.DLL  10.0.19041.3636
+0x7ffd2d310000 - 0x7ffd2d43afff  ole32.dll  10.0.19041.4355
+0x7ffd2d8b0000 - 0x7ffd2d970fff  KERNEL32.DLL  10.0.19041.4597  (WARNING: No symbols, kernel32.pdb, 396B53214FBEC11DC2AC82E86F6D8DAA1)
+0x7ffd2da30000 - 0x7ffd2da5efff  IMM32.DLL  10.0.19041.4474
+0x7ffd2da60000 - 0x7ffd2db0ffff  ADVAPI32.dll  10.0.19041.4597
+0x7ffd2db10000 - 0x7ffd2dbaffff  sechost.dll  10.0.19041.4597
+0x7ffd2dbb0000 - 0x7ffd2dd4efff  USER32.dll  10.0.19041.4474  (WARNING: No symbols, user32.pdb, 6A873A25D8694F8ABBCFAC114793DAAE1)
+0x7ffd2dd50000 - 0x7ffd2dda4fff  shlwapi.dll  10.0.19041.4355
+0x7ffd2de10000 - 0x7ffd2e162fff  combase.dll  10.0.19041.4355  (WARNING: No symbols, combase.pdb, 6C146F310D333559974D1D5D3FA2E4DA1)
+0x7ffd2e170000 - 0x7ffd2e1dafff  WS2_32.dll  10.0.19041.3636
+0x7ffd2e420000 - 0x7ffd2e44afff  GDI32.dll  10.0.19041.4474
+0x7ffd2e490000 - 0x7ffd2e687fff  ntdll.dll  10.0.19041.4522  (WARNING: No symbols, ntdll.pdb, 4C328D42D0B9A2B218FB85860DECF27C1)

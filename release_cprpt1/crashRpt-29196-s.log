@@ -1,0 +1,1805 @@
+Operating system: Windows NT
+                  10.0.19045 
+CPU: amd64
+     family 6 model 167 stepping 1
+     16 CPUs
+
+GPU: UNKNOWN
+
+Crash reason:  EXCEPTION_STACK_BUFFER_OVERRUN
+Crash address: 0xacf304e8
+Process uptime: 5 seconds
+
+Thread 0 (crashed)
+ 0  Qt5Core.dll + 0x204e8
+    rax = 0x0000000000000001   rdx = 0x00000014ca0faeb0
+    rcx = 0x0000000000000007   rbx = 0x00007ffcad208238
+    rsi = 0x00000014ca0faf48   rdi = 0x00000014ca0faeb0
+    rbp = 0x00000014ca0fb0d0   rsp = 0x00000014ca0fadf0
+     r8 = 0x00000014ca0fae50    r9 = 0x0000000000000001
+    r10 = 0x0000000000008000   r11 = 0x00000014ca0fac70
+    r12 = 0x0000000000000009   r13 = 0x00000014ca0ffad8
+    r14 = 0x00000014ca0fb140   r15 = 0x0000011649fc0db0
+    rip = 0x00007ffcacf304e8
+    Found by: given as instruction pointer in context
+
+    Stack contents:
+     00000014ca0fadf0 b0 ae 0f ca 14 00 00 00 48 af 0f ca 14 00 00 00  ........H.......
+     00000014ca0fae00 01 00 00 00 14 00 00 00 09 00 00 00 00 00 00 00  ................
+     00000014ca0fae10 b0 ae 0f ca 14 00 00 00 3d e7 f2 ac fc 7f 00 00  ........=.......
+    Possible instruction pointers:
+
+ 1  Qt5Core.dll + 0x1e73d
+    rbp = 0x00000014ca0fb0d0   rsp = 0x00000014ca0fae20
+    rip = 0x00007ffcacf2e73d
+    Found by: stack scanning
+
+    Stack contents:
+     00000014ca0fae20 58 ae 0f ca 14 00 00 00 38 82 20 ad fc 7f 00 00  X.......8. .....
+    Possible instruction pointers:
+
+ 2  Qt5Core.dll + 0x2f8238
+    rbp = 0x00000014ca0fb0d0   rsp = 0x00000014ca0fae30
+    rip = 0x00007ffcad208238
+    Found by: stack scanning
+
+    Stack contents:
+     00000014ca0fae30 48 af 0f ca 14 00 00 00 10 c8 79 4e 16 01 00 00  H.........yN....
+     00000014ca0fae40 90 ae 0f ca 14 00 00 00 78 ae 0f ca 14 00 00 00  ........x.......
+     00000014ca0fae50 30 0e 78 4e 16 01 00 00 38 93 20 ad fc 7f 00 00  0.xN....8. .....
+    Possible instruction pointers:
+
+ 3  Qt5Core.dll + 0x2f9338
+    rbp = 0x00000014ca0fb0d0   rsp = 0x00000014ca0fae60
+    rip = 0x00007ffcad209338
+    Found by: stack scanning
+
+    Stack contents:
+     00000014ca0fae60 88 04 00 00 00 00 00 00 10 c8 79 4e 16 01 00 00  ..........yN....
+     00000014ca0fae70 69 c8 79 4e 16 01 00 00 9e 3b f3 ac fc 7f 00 00  i.yN.....;......
+    Possible instruction pointers:
+
+ 4  Qt5Core.dll + 0x23b9e
+    rbp = 0x00000014ca0fb0d0   rsp = 0x00000014ca0fae80
+    rip = 0x00007ffcacf33b9e
+    Found by: stack scanning
+
+    Stack contents:
+     00000014ca0fae80 88 04 00 00 00 00 00 00 38 82 20 ad fc 7f 00 00  ........8. .....
+    Possible instruction pointers:
+
+ 5  Qt5Core.dll + 0x2f8238
+    rbp = 0x00000014ca0fb0d0   rsp = 0x00000014ca0fae90
+    rip = 0x00007ffcad208238
+    Found by: stack scanning
+
+    Stack contents:
+     00000014ca0fae90 c0 2d e9 49 16 01 00 00 01 00 00 00 00 00 00 00  .-.I............
+     00000014ca0faea0 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000014ca0faeb0 02 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000014ca0faec0 00 00 00 00 00 00 00 00 90 1c 20 ad fc 7f 00 00  .......... .....
+    Possible instruction pointers:
+
+ 6  Qt5Core.dll + 0x2f1c90
+    rbp = 0x00000014ca0fb0d0   rsp = 0x00000014ca0faed0
+    rip = 0x00007ffcad201c90
+    Found by: stack scanning
+
+    Stack contents:
+     00000014ca0faed0 a0 70 ff 49 16 01 00 00 c3 5e df fa f6 7f 00 00  .p.I.....^......
+    Possible instruction pointers:
+
+ 7  crashpadReporterExample.exe + 0x15ec3
+    rbp = 0x00000014ca0fb0d0   rsp = 0x00000014ca0faee0
+    rip = 0x00007ff6fadf5ec3
+    Found by: stack scanning
+
+    Stack contents:
+     00000014ca0faee0 01 00 00 00 00 00 00 00 01 7b f4 49 16 01 00 00  .........{.I....
+     00000014ca0faef0 09 00 00 00 00 00 00 00 a0 70 ff 49 16 01 00 00  .........p.I....
+     00000014ca0faf00 d0 b0 0f ca 14 00 00 00 b4 94 df fa f6 7f 00 00  ................
+    Possible instruction pointers:
+
+ 8  crashpadReporterExample.exe + 0x194b4
+    rbp = 0x00000014ca0fb0d0   rsp = 0x00000014ca0faf10
+    rip = 0x00007ff6fadf94b4
+    Found by: stack scanning
+
+    Stack contents:
+     00000014ca0faf10 48 af 0f ca 14 00 00 00 01 00 00 00 00 00 00 00  H...............
+     00000014ca0faf20 01 7b f4 49 16 01 00 00 60 7b f4 49 16 01 00 00  .{.I....`{.I....
+     00000014ca0faf30 40 af 0f ca 14 00 00 00 40 af 0f ca 14 00 00 00  @.......@.......
+     00000014ca0faf40 4f b9 ad bb c8 90 01 00 a0 80 20 ad fc 7f 00 00  O......... .....
+    Possible instruction pointers:
+
+ 9  Qt5Core.dll + 0x2f80a0
+    rbp = 0x00000014ca0fb0d0   rsp = 0x00000014ca0faf50
+    rip = 0x00007ffcad2080a0
+    Found by: stack scanning
+
+    Stack contents:
+     00000014ca0faf50 10 c8 79 4e 16 01 00 00 01 fa 0f ca 14 00 00 00  ..yN............
+     00000014ca0faf60 90 ef df fa f6 7f 00 00                          ........        
+    Possible instruction pointers:
+
+10  crashpadReporterExample.exe + 0x1ef90
+    rbp = 0x00000014ca0fb0d0   rsp = 0x00000014ca0faf68
+    rip = 0x00007ff6fadfef90
+    Found by: stack scanning
+
+    Stack contents:
+     00000014ca0faf68 90 cf 79 4e 16 01 00 00 00 00 00 00 00 00 00 00  ..yN............
+     00000014ca0faf78 40 73 ff 49 16 01 00 00 00 00 00 00 00 00 00 00  @s.I............
+     00000014ca0faf88 dd ae df fa f6 7f 00 00                          ........        
+    Possible instruction pointers:
+
+11  crashpadReporterExample.exe + 0x1aedd
+    rbp = 0x00000014ca0fb0d0   rsp = 0x00000014ca0faf90
+    rip = 0x00007ff6fadfaedd
+    Found by: stack scanning
+
+    Stack contents:
+     00000014ca0faf90 d8 fa 0f ca 14 00 00 00 aa 50 f3 ac fc 7f 00 00  .........P......
+    Possible instruction pointers:
+
+12  Qt5Core.dll + 0x250aa
+    rbp = 0x00000014ca0fb0d0   rsp = 0x00000014ca0fafa0
+    rip = 0x00007ffcacf350aa
+    Found by: stack scanning
+
+    Stack contents:
+     00000014ca0fafa0 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000014ca0fafb0 01 00 00 00 f6 7f 00 00 d8 fa 0f ca 14 00 00 00  ................
+     00000014ca0fafc0 00 00 00 00 00 00 00 00 a7 1d 10 ad fc 7f 00 00  ................
+    Possible instruction pointers:
+
+13  Qt5Core.dll + 0x1f1da7
+    rbp = 0x00000014ca0fb0d0   rsp = 0x00000014ca0fafd0
+    rip = 0x00007ffcad101da7
+    Found by: stack scanning
+
+    Stack contents:
+     00000014ca0fafd0 d8 fa 0f ca 14 00 00 00 00 00 00 00 16 01 00 00  ................
+     00000014ca0fafe0 01 00 00 00 16 01 00 00 40 b1 0f ca 14 00 00 00  ........@.......
+     00000014ca0faff0 00 00 00 00 00 00 00 00 22 b0 b0 af fc 7f 00 00  ........".......
+    Possible instruction pointers:
+
+14  Qt5Widgets.dll + 0x1b022
+    rbp = 0x00000014ca0fb0d0   rsp = 0x00000014ca0fb000
+    rip = 0x00007ffcafb0b022
+    Found by: stack scanning
+
+    Stack contents:
+     00000014ca0fb000 02 00 00 00 16 01 00 00 94 59 00 00 00 00 00 00  .........Y......
+     00000014ca0fb010 b0 0d fc 49 16 01 00 00 00 6a fd 49 16 01 00 00  ...I.....j.I....
+     00000014ca0fb020 00 00 00 00 00 00 00 00 73 00 00 00 16 00 00 00  ........s.......
+     00000014ca0fb030 00 00 00 00 00 00 00 00 01 01 00 00 17 01 00 00  ................
+     00000014ca0fb040 40 b1 0f ca 14 00 00 00 e0 cb fc 49 16 01 00 00  @..........I....
+     00000014ca0fb050 00 00 00 00 00 00 00 00 30 f9 f8 49 16 01 00 00  ........0..I....
+     00000014ca0fb060 40 cb fc 49 16 01 00 00 10 bb fa 49 16 01 00 00  @..I.......I....
+     00000014ca0fb070 00 6a fd 49 16 01 00 00 31 b0 b3 af fc 7f 00 00  .j.I....1.......
+    Possible instruction pointers:
+
+15  Qt5Widgets.dll + 0x4b031
+    rbp = 0x00000014ca0fb0d0   rsp = 0x00000014ca0fb080
+    rip = 0x00007ffcafb3b031
+    Found by: stack scanning
+
+    Stack contents:
+     00000014ca0fb080 00 6a fd 49 16 01 00 00 00 00 00 00 00 00 00 00  .j.I............
+     00000014ca0fb090 d8 fa 0f ca 14 00 00 00 b0 0d fc 49 16 01 00 00  ...........I....
+     00000014ca0fb0a0 09 00 00 00 00 00 00 00 73 00 00 00 16 00 00 00  ........s.......
+     00000014ca0fb0b0 00 00 00 00 00 00 00 00 8e 00 00 00 01 01 00 00  ................
+     00000014ca0fb0c0 70 4f 79 4e 16 01 00 00 10 bb fa 49 16 01 00 00  pOyN.......I....
+     00000014ca0fb0d0 00 00 00 00 00 00 00 00 31 b0 b3 af fc 7f 00 00  ........1.......
+    Possible instruction pointers:
+
+16  Qt5Widgets.dll + 0x4b031
+    rsp = 0x00000014ca0fb0e0   rip = 0x00007ffcafb3b031
+    Found by: stack scanning
+
+    Stack contents:
+     00000014ca0fb0e0 00 6a fd 49 16 01 00 00 b0 0d fc 49 16 01 00 00  .j.I.......I....
+     00000014ca0fb0f0 b0 0d fc 49 16 01 00 00 50 bb 0f ca 14 00 00 00  ...I....P.......
+     00000014ca0fb100 b0 0d fc 49 16 01 00 00 00 6a fd 49 16 01 00 00  ...I.....j.I....
+     00000014ca0fb110 01 b2 0f ca 14 00 00 00 a7 ec bc af fc 7f 00 00  ................
+    Possible instruction pointers:
+
+17  Qt5Widgets.dll + 0xdeca7
+    rsp = 0x00000014ca0fb120   rip = 0x00007ffcafbceca7
+    Found by: stack scanning
+
+    Stack contents:
+     00000014ca0fb120 b0 0d fc 49 16 01 00 00 09 00 00 00 fc 7f 00 00  ...I............
+     00000014ca0fb130 00 d4 fd 49 16 01 00 00 01 00 00 00 16 00 00 00  ...I............
+     00000014ca0fb140 00 00 00 00 00 00 00 00 60 b1 0f ca 14 00 00 00  ........`.......
+     00000014ca0fb150 00 6a fd 49 16 01 00 00 c8 eb bc af fc 7f 00 00  .j.I............
+    Possible instruction pointers:
+
+18  Qt5Widgets.dll + 0xdebc8
+    rsp = 0x00000014ca0fb160   rip = 0x00007ffcafbcebc8
+    Found by: stack scanning
+
+    Stack contents:
+     00000014ca0fb160 00 00 00 00 fc 7f 00 00 00 d4 fd 49 16 01 00 00  ...........I....
+     00000014ca0fb170 00 d4 fd 49 16 01 00 00 b0 0d fc 49 16 01 00 00  ...I.......I....
+     00000014ca0fb180 50 bb 0f ca 14 00 00 00 ad f8 bc af fc 7f 00 00  P...............
+    Possible instruction pointers:
+
+19  Qt5Widgets.dll + 0xdf8ad
+    rsp = 0x00000014ca0fb190   rip = 0x00007ffcafbcf8ad
+    Found by: stack scanning
+
+    Stack contents:
+     00000014ca0fb190 10 40 f7 49 16 01 00 00 28 b2 0f ca 14 00 00 00  .@.I....(.......
+     00000014ca0fb1a0 00 6a fd 49 16 01 00 00 50 bb 0f ca 14 00 00 00  .j.I....P.......
+     00000014ca0fb1b0 01 00 00 00 00 00 00 00 b2 79 b2 af fc 7f 00 00  .........y......
+    Possible instruction pointers:
+
+20  Qt5Widgets.dll + 0x379b2
+    rsp = 0x00000014ca0fb1c0   rip = 0x00007ffcafb279b2
+    Found by: stack scanning
+
+    Stack contents:
+     00000014ca0fb1c0 31 00 00 00 15 00 00 00 10 40 f7 49 16 01 00 00  1........@.I....
+     00000014ca0fb1d0 50 bb 0f ca 14 00 00 00 b0 0d fc 49 16 01 00 00  P..........I....
+     00000014ca0fb1e0 50 bb 0f ca 14 00 00 00 32 4a 0e ad fc 7f 00 00  P.......2J......
+    Possible instruction pointers:
+
+21  Qt5Core.dll + 0x1d4a32
+    rsp = 0x00000014ca0fb1f0   rip = 0x00007ffcad0e4a32
+    Found by: stack scanning
+
+    Stack contents:
+     00000014ca0fb1f0 30 f9 f8 49 16 01 00 00 00 00 00 00 00 00 00 00  0..I............
+     00000014ca0fb200 50 bb 0f ca 14 00 00 00 08 12 7c 4e 16 01 00 00  P.........|N....
+     00000014ca0fb210 b0 0d fc 49 16 01 00 00 5b 53 0e ad fc 7f 00 00  ...I....[S......
+    Possible instruction pointers:
+
+22  Qt5Core.dll + 0x1d535b
+    rsp = 0x00000014ca0fb220   rip = 0x00007ffcad0e535b
+    Found by: stack scanning
+
+    Stack contents:
+     00000014ca0fb220 01 00 00 00 00 00 00 00 b0 0d fc 49 16 01 00 00  ...........I....
+     00000014ca0fb230 b0 0d fc 49 16 01 00 00 50 bb 0f ca 14 00 00 00  ...I....P.......
+     00000014ca0fb240 f0 7d f7 49 16 01 00 00 90 49 b0 af fc 7f 00 00  .}.I.....I......
+    Possible instruction pointers:
+
+23  Qt5Widgets.dll + 0x14990
+    rsp = 0x00000014ca0fb250   rip = 0x00007ffcafb04990
+    Found by: stack scanning
+
+    Stack contents:
+     00000014ca0fb250 10 40 f7 49 16 01 00 00 10 40 f7 49 16 01 00 00  .@.I.....@.I....
+     00000014ca0fb260 50 bb 0f ca 14 00 00 00 50 bb 0f ca 14 00 00 00  P.......P.......
+     00000014ca0fb270 00 00 00 00 00 00 00 00 b0 28 b0 af fc 7f 00 00  .........(......
+    Possible instruction pointers:
+
+24  Qt5Widgets.dll + 0x128b0
+    rsp = 0x00000014ca0fb280   rip = 0x00007ffcafb028b0
+    Found by: stack scanning
+
+    Stack contents:
+     00000014ca0fb280 50 bb 0f ca 14 00 00 00 80 b3 0f ca 14 00 00 00  P...............
+     00000014ca0fb290 00 00 00 00 00 00 00 00 80 b3 0f ca 14 00 00 00  ................
+     00000014ca0fb2a0 18 b4 0f ca 14 00 00 00 01 00 00 00 16 01 00 00  ................
+     00000014ca0fb2b0 00 00 00 00 00 00 00 00 00 00 00 00 16 01 00 00  ................
+     00000014ca0fb2c0 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000014ca0fb2d0 00 00 00 00 00 00 00 00 40 00 00 00 00 00 00 00  ........@.......
+     00000014ca0fb2e0 30 00 00 00 00 00 00 00 10 00 00 00 00 00 00 00  0...............
+     00000014ca0fb2f0 00 00 f4 49 16 01 00 00 b9 b3 0f ca 14 00 00 00  ...I............
+     00000014ca0fb300 00 00 00 00 00 00 00 00 31 00 00 00 15 00 00 00  ........1.......
+     00000014ca0fb310 f0 7d f7 49 16 01 00 00 00 00 00 00 fc 7f 00 00  .}.I............
+     00000014ca0fb320 00 d4 fd 49 16 01 00 00 a1 5b 4b 2e fd 7f 00 00  ...I.....[K.....
+    Possible instruction pointers:
+
+25  ntdll.dll + 0x25ba1
+    rsp = 0x00000014ca0fb330   rip = 0x00007ffd2e4b5ba1
+    Found by: stack scanning
+
+    Stack contents:
+     00000014ca0fb330 00 00 00 00 fc 7f 00 00 00 2d e9 49 16 01 00 00  .........-.I....
+     00000014ca0fb340 00 00 f4 49 02 00 00 00 00 00 e9 49 16 01 00 00  ...I.......I....
+     00000014ca0fb350 b0 0d fc 49 16 01 00 00 a1 5b 4b 2e fd 7f 00 00  ...I.....[K.....
+    Possible instruction pointers:
+
+26  ntdll.dll + 0x25ba1
+    rsp = 0x00000014ca0fb360   rip = 0x00007ffd2e4b5ba1
+    Found by: stack scanning
+
+    Stack contents:
+     00000014ca0fb360 d0 22 fe 49 16 01 00 00 d9 01 00 00 00 00 00 00  .".I............
+     00000014ca0fb370 e8 00 00 e8 16 00 00 00 50 28 01 4a 16 01 00 00  ........P(.J....
+     00000014ca0fb380 00 00 00 00 00 00 00 00 40 00 00 00 00 00 00 00  ........@.......
+     00000014ca0fb390 60 2c 78 4e 16 01 00 00 75 00 00 00 00 00 00 00  `,xN....u.......
+     00000014ca0fb3a0 00 00 f4 49 16 01 00 00 80 43 79 4e 16 01 00 00  ...I.....CyN....
+     00000014ca0fb3b0 04 00 00 00 00 00 00 00 c7 b3 4b 2e fd 7f 00 00  ..........K.....
+    Possible instruction pointers:
+
+27  ntdll.dll + 0x2b3c7
+    rsp = 0x00000014ca0fb3c0   rip = 0x00007ffd2e4bb3c7
+    Found by: stack scanning
+
+    Stack contents:
+     00000014ca0fb3c0 00 00 e9 49 16 01 00 00 b0 0d fc 49 16 01 00 00  ...I.......I....
+     00000014ca0fb3d0 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000014ca0fb3e0 60 9f 01 4a 16 01 00 00 b1 47 4b 2e fd 7f 00 00  `..J.....GK.....
+    Possible instruction pointers:
+
+28  ntdll.dll + 0x247b1
+    rsp = 0x00000014ca0fb3f0   rip = 0x00007ffd2e4b47b1
+    Found by: stack scanning
+
+    Stack contents:
+     00000014ca0fb3f0 a8 91 01 4a 16 01 00 00 b0 0d fc 49 16 01 00 00  ...J.......I....
+     00000014ca0fb400 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000014ca0fb410 b0 52 79 4e 16 01 00 00 00 00 00 00 00 dc 93 40  .RyN...........@
+     00000014ca0fb420 00 00 00 00 00 e0 89 40 00 00 00 00 00 80 48 40  .......@......H@
+     00000014ca0fb430 00 00 00 00 00 00 35 40 00 00 00 00 00 00 00 00  ......5@........
+     00000014ca0fb440 00 00 00 00 00 00 00 00 7a 00 00 00 fc 7f 00 00  ........z.......
+     00000014ca0fb450 28 d5 79 4e 16 01 00 00 5b f0 3c 2c fd 7f 00 00  (.yN....[.<,....
+    Possible instruction pointers:
+
+29  ucrtbase.dll + 0xf05b
+    rsp = 0x00000014ca0fb460   rip = 0x00007ffd2c3cf05b
+    Found by: stack scanning
+
+    Stack contents:
+     00000014ca0fb460 30 d5 79 4e 16 01 00 00 00 6a fd 49 16 01 00 00  0.yN.....j.I....
+     00000014ca0fb470 00 00 e9 49 16 01 00 00 d8 fa 0f ca 14 00 00 00  ...I............
+     00000014ca0fb480 28 d5 79 4e 16 01 00 00 c3 b6 e5 a9 fc 7f 00 00  (.yN............
+    Possible instruction pointers:
+
+30  Qt5Gui.dll + 0x27b6c3
+    rsp = 0x00000014ca0fb490   rip = 0x00007ffca9e5b6c3
+    Found by: stack scanning
+
+    Stack contents:
+     00000014ca0fb490 30 d5 79 4e 16 01 00 00 f7 04 00 00 3c 03 00 00  0.yN........<...
+     00000014ca0fb4a0 10 b8 0f ca 14 00 00 00 d8 fa 0f ca 14 00 00 00  ................
+     00000014ca0fb4b0 10 d5 79 4e 16 01 00 00 90 90 bf a9 fc 7f 00 00  ..yN............
+    Possible instruction pointers:
+
+31  Qt5Gui.dll + 0x19090
+    rsp = 0x00000014ca0fb4c0   rip = 0x00007ffca9bf9090
+    Found by: stack scanning
+
+    Stack contents:
+     00000014ca0fb4c0 10 d5 79 4e 16 01 00 00 a1 d0 b2 af fc 7f 00 00  ..yN............
+    Possible instruction pointers:
+
+32  Qt5Widgets.dll + 0x3d0a1
+    rsp = 0x00000014ca0fb4d0   rip = 0x00007ffcafb2d0a1
+    Found by: stack scanning
+
+    Stack contents:
+     00000014ca0fb4d0 50 53 79 4e 16 01 00 00 00 00 f4 49 16 01 00 00  PSyN.......I....
+     00000014ca0fb4e0 89 b5 0f ca 14 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000014ca0fb4f0 00 00 00 00 00 00 00 00 6b 70 fd a9 fc 7f 00 00  ........kp......
+    Possible instruction pointers:
+
+33  Qt5Gui.dll + 0x3f706b
+    rsp = 0x00000014ca0fb500   rip = 0x00007ffca9fd706b
+    Found by: stack scanning
+
+    Stack contents:
+     00000014ca0fb500 68 b6 0f ca 14 00 00 00 70 b5 0f ca 14 00 00 00  h.......p.......
+     00000014ca0fb510 00 6a fd 49 16 01 00 00 0c 83 bf a9 fc 7f 00 00  .j.I............
+    Possible instruction pointers:
+
+34  Qt5Gui.dll + 0x1830c
+    rsp = 0x00000014ca0fb520   rip = 0x00007ffca9bf830c
+    Found by: stack scanning
+
+    Stack contents:
+     00000014ca0fb520 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000014ca0fb530 00 00 00 00 00 00 f0 3f 00 00 00 00 00 00 00 00  .......?........
+     00000014ca0fb540 00 00 00 00 00 00 00 00 ff ff ff ff ff ff ff ff  ................
+     00000014ca0fb550 10 b7 0f ca 14 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000014ca0fb560 01 00 00 00 00 00 00 00 b0 0d fc 49 16 01 00 00  ...........I....
+     00000014ca0fb570 00 00 00 00 00 00 f0 3f 00 00 00 00 00 00 00 00  .......?........
+     00000014ca0fb580 00 00 00 00 00 00 00 00 00 00 00 00 00 00 f0 3f  ...............?
+     00000014ca0fb590 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000014ca0fb5a0 00 00 00 00 00 00 00 00 a8 91 01 4a 16 01 00 00  ...........J....
+     00000014ca0fb5b0 b0 0d fc 49 16 01 00 00 00 00 00 00 00 00 00 00  ...I............
+     00000014ca0fb5c0 10 b8 0f ca 14 00 00 00 70 8f 76 4e 16 01 00 00  ........p.vN....
+     00000014ca0fb5d0 00 6a fd 49 16 01 00 00 04 00 00 00 00 00 00 00  .j.I............
+     00000014ca0fb5e0 f0 b6 0f ca 14 00 00 00 96 75 b2 af fc 7f 00 00  .........u......
+    Possible instruction pointers:
+
+35  Qt5Widgets.dll + 0x37596
+    rsp = 0x00000014ca0fb5f0   rip = 0x00007ffcafb27596
+    Found by: stack scanning
+
+    Stack contents:
+     00000014ca0fb5f0 00 6a fd 49 16 01 00 00 a8 91 01 4a 16 01 00 00  .j.I.......J....
+     00000014ca0fb600 18 6a fd 49 16 01 00 00 ff ff ff ff 14 00 00 00  .j.I............
+     00000014ca0fb610 e0 b8 0f ca 14 00 00 00 10 b8 0f ca 14 00 00 00  ................
+     00000014ca0fb620 00 00 00 00 02 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000014ca0fb630 40 73 ff 49 16 01 00 00 a1 5b 4b 2e fd 7f 00 00  @s.I.....[K.....
+    Possible instruction pointers:
+
+36  ntdll.dll + 0x25ba1
+    rsp = 0x00000014ca0fb640   rip = 0x00007ffd2e4b5ba1
+    Found by: stack scanning
+
+    Stack contents:
+     00000014ca0fb640 00 00 fe 49 16 01 00 00 e0 eb c0 a9 fc 7f 00 00  ...I............
+    Possible instruction pointers:
+
+37  Qt5Gui.dll + 0x2ebe0
+    rsp = 0x00000014ca0fb650   rip = 0x00007ffca9c0ebe0
+    Found by: stack scanning
+
+    Stack contents:
+     00000014ca0fb650 00 00 e9 49 16 01 00 00 10 b8 0f ca 14 00 00 00  ...I............
+     00000014ca0fb660 70 8f 76 4e 16 01 00 00 f0 53 79 4e 16 01 00 00  p.vN.....SyN....
+     00000014ca0fb670 00 00 00 00 00 00 00 80 00 00 00 00 00 00 00 00  ................
+     00000014ca0fb680 00 00 00 00 00 00 00 00 0a a2 e6 a9 fc 7f 00 00  ................
+    Possible instruction pointers:
+
+38  Qt5Gui.dll + 0x28a20a
+    rsp = 0x00000014ca0fb690   rip = 0x00007ffca9e6a20a
+    Found by: stack scanning
+
+    Stack contents:
+     00000014ca0fb690 40 b7 0f ca 14 00 00 00 b2 b0 c2 a9 fc 7f 00 00  @...............
+    Possible instruction pointers:
+
+39  Qt5Gui.dll + 0x4b0b2
+    rsp = 0x00000014ca0fb6a0   rip = 0x00007ffca9c2b0b2
+    Found by: stack scanning
+
+    Stack contents:
+     00000014ca0fb6a0 90 01 00 00 2c 01 00 00 38 04 00 00 26 02 00 00  ....,...8...&...
+     00000014ca0fb6b0 40 79 fc 49 16 01 00 00 00 00 00 00 00 00 00 00  @y.I............
+     00000014ca0fb6c0 38 04 00 00 26 02 00 00 c7 05 00 00 51 03 00 00  8...&.......Q...
+     00000014ca0fb6d0 00 00 00 00 00 00 f0 3f 00 00 00 00 00 00 00 00  .......?........
+     00000014ca0fb6e0 e0 d0 fd a9 fc 7f 00 00                          ........        
+    Possible instruction pointers:
+
+40  Qt5Gui.dll + 0x3fd0e0
+    rsp = 0x00000014ca0fb6e8   rip = 0x00007ffca9fdd0e0
+    Found by: stack scanning
+
+    Stack contents:
+     00000014ca0fb6e8 00 00 00 00 00 00 00 00 03 00 0e ca 14 00 00 00  ................
+     00000014ca0fb6f8 00 00 00 00 6f 0a 00 00 00 00 00 00 00 80 48 40  ....o.........H@
+     00000014ca0fb708 00 00 00 00 00 00 35 40 00 00 00 00 00 e0 67 40  ......5@......g@
+     00000014ca0fb718 00 00 00 00 00 60 71 40 00 00 00 00 00 dc 93 40  .....`q@.......@
+     00000014ca0fb728 00 00 00 00 00 e0 89 40 01 00 00 00 00 00 00 00  .......@........
+     00000014ca0fb738 00 00 00 00 00 00 00 00 00 00 00 00 26 02 00 00  ............&...
+     00000014ca0fb748 c7 05 00 00 51 03 00 00 be 68 82 60 2b c9 00 00  ....Q....h.`+...
+     00000014ca0fb758 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 80  ................
+     00000014ca0fb768 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000014ca0fb778 00 00 00 00 00 00 00 00 50 bb 0f ca 14 00 00 00  ........P.......
+     00000014ca0fb788 d8 fa 0f ca 14 00 00 00 b0 0d fc 49 16 01 00 00  ...........I....
+     00000014ca0fb798 10 ac 03 4a 16 01 00 00 01 00 00 00 00 00 00 00  ...J............
+     00000014ca0fb7a8 b0 0d fc 49 16 01 00 00 50 bb 0f ca 14 00 00 00  ...I....P.......
+     00000014ca0fb7b8 ca 2a 0e ad fc 7f 00 00                          .*......        
+    Possible instruction pointers:
+
+41  Qt5Core.dll + 0x1d2aca
+    rsp = 0x00000014ca0fb7c0   rip = 0x00007ffcad0e2aca
+    Found by: stack scanning
+
+    Stack contents:
+     00000014ca0fb7c0 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000014ca0fb7d0 00 00 00 00 00 00 f0 3f 60 7b f4 49 16 01 00 00  .......?`{.I....
+     00000014ca0fb7e0 00 00 00 00 00 00 00 00 60 7b f4 49 16 01 00 00  ........`{.I....
+     00000014ca0fb7f0 b0 0d fc 49 16 01 00 00 50 bb 0f ca 14 00 00 00  ...I....P.......
+     00000014ca0fb800 e0 b7 0f ca 14 00 00 00 17 c9 b7 e0 24 9c 00 00  ............$...
+     00000014ca0fb810 b0 0d fc 49 16 01 00 00 50 16 ff af fc 7f 00 00  ...I....P.......
+    Possible instruction pointers:
+
+42  Qt5Widgets.dll + 0x501650
+    rsp = 0x00000014ca0fb820   rip = 0x00007ffcafff1650
+    Found by: stack scanning
+
+    Stack contents:
+     00000014ca0fb820 ff ff ff ff 00 00 00 00 95 5b b0 af fc 7f 00 00  .........[......
+    Possible instruction pointers:
+
+43  Qt5Widgets.dll + 0x15b95
+    rsp = 0x00000014ca0fb830   rip = 0x00007ffcafb05b95
+    Found by: stack scanning
+
+    Stack contents:
+     00000014ca0fb830 00 00 00 00 00 00 f0 3f 00 00 00 00 00 00 00 00  .......?........
+     00000014ca0fb840 00 00 00 00 00 00 00 00 00 00 00 00 00 00 f0 3f  ...............?
+     00000014ca0fb850 17 00 00 00 00 c0 61 c0 00 00 00 00 00 10 70 c0  ......a.......p.
+     00000014ca0fb860 00 00 00 00 00 00 00 00 00 d4 fd 49 16 01 00 00  ...........I....
+     00000014ca0fb870 00 00 00 00 00 00 00 00 73 00 00 00 16 00 00 00  ........s.......
+     00000014ca0fb880 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000014ca0fb890 00 00 00 00 00 00 5d 40 00 00 00 00 00 00 37 40  ......]@......7@
+     00000014ca0fb8a0 b0 0d fc 49 16 01 00 00 f0 7d f7 49 16 01 00 00  ...I.....}.I....
+     00000014ca0fb8b0 40 79 fc 49 16 01 00 00 30 c6 0f ca 14 00 00 00  @y.I....0.......
+     00000014ca0fb8c0 03 00 00 00 00 00 00 00 b0 0d fc 49 16 01 00 00  ...........I....
+     00000014ca0fb8d0 b0 0d fc 49 16 01 00 00 f0 b9 0f ca 14 00 00 00  ...I............
+     00000014ca0fb8e0 00 00 00 00 00 00 00 00 0a 04 b5 af fc 7f 00 00  ................
+    Possible instruction pointers:
+
+44  Qt5Widgets.dll + 0x6040a
+    rsp = 0x00000014ca0fb8f0   rip = 0x00007ffcafb5040a
+    Found by: stack scanning
+
+    Stack contents:
+     00000014ca0fb8f0 00 00 00 00 00 00 00 00 b0 0d fc 49 16 01 00 00  ...........I....
+     00000014ca0fb900 00 00 00 00 00 00 00 00 00 d4 fd 49 16 01 00 00  ...........I....
+     00000014ca0fb910 01 16 ff af fc 7f 00 00                          ........        
+    Possible instruction pointers:
+
+45  Qt5Widgets.dll + 0x501601
+    rsp = 0x00000014ca0fb918   rip = 0x00007ffcafff1601
+    Found by: stack scanning
+
+    Stack contents:
+     00000014ca0fb918 50 16 ff af fc 7f 00 00                          P.......        
+    Possible instruction pointers:
+
+46  Qt5Widgets.dll + 0x501650
+    rsp = 0x00000014ca0fb920   rip = 0x00007ffcafff1650
+    Found by: stack scanning
+
+    Stack contents:
+     00000014ca0fb920 01 00 00 00 16 01 00 00 00 00 00 00 14 00 00 00  ................
+     00000014ca0fb930 00 00 00 00 16 01 00 00 f0 ba 0f ca 14 00 00 00  ................
+     00000014ca0fb940 17 00 00 00 16 01 00 00 1e 2e 01 11 00 00 00 00  ................
+     00000014ca0fb950 8e 00 00 00 16 01 00 00 01 01 00 00 fd 7f 00 00  ................
+     00000014ca0fb960 20 00 cc 00 16 01 00 00 00 00 00 00 00 00 00 00   ...............
+     00000014ca0fb970 79 01 00 00 28 00 00 00 80 d1 03 4a 16 01 00 00  y...(......J....
+     00000014ca0fb980 31 00 00 00 15 00 00 00 ff ff ff ff 00 00 00 00  1...............
+     00000014ca0fb990 60 2c 78 4e 16 01 00 00 46 00 00 00 00 00 00 00  `,xN....F.......
+     00000014ca0fb9a0 0c 00 04 00 00 00 00 00 80 43 79 4e 16 01 00 00  .........CyN....
+     00000014ca0fb9b0 f6 00 00 00 1f 00 00 00 d0 4c 79 4e 16 01 00 00  .........LyN....
+     00000014ca0fb9c0 00 00 00 00 00 80 48 40 00 00 00 00 00 00 35 40  ......H@......5@
+     00000014ca0fb9d0 f8 00 00 00 03 30 01 08 8e 00 00 00 01 01 00 00  .....0..........
+     00000014ca0fb9e0 01 01 00 00 17 01 00 00 b1 47 4b 2e fd 7f 00 00  .........GK.....
+    Possible instruction pointers:
+
+47  ntdll.dll + 0x247b1
+    rsp = 0x00000014ca0fb9f0   rip = 0x00007ffd2e4b47b1
+    Found by: stack scanning
+
+    Stack contents:
+     00000014ca0fb9f0 b0 bd 0f ca 14 00 00 00 70 0e fc 49 16 01 00 00  ........p..I....
+     00000014ca0fba00 f8 00 00 00 00 00 00 00 0b 00 00 00 00 00 00 00  ................
+     00000014ca0fba10 d0 4c 79 4e 16 01 00 00 b1 47 4b 2e fd 7f 00 00  .LyN.....GK.....
+    Possible instruction pointers:
+
+48  ntdll.dll + 0x247b1
+    rsp = 0x00000014ca0fba20   rip = 0x00007ffd2e4b47b1
+    Found by: stack scanning
+
+    Stack contents:
+     00000014ca0fba20 d0 4c 79 4e 16 01 00 00 00 00 f4 49 16 01 00 00  .LyN.......I....
+     00000014ca0fba30 61 bb 0f ca 14 00 00 00 bf 00 00 00 16 01 00 00  a...............
+     00000014ca0fba40 bf 00 00 00 16 01 00 00 70 0e fc 49 16 01 00 00  ........p..I....
+     00000014ca0fba50 f0 90 76 4e 16 01 00 00 f7 00 d8 a9 fc 7f 00 00  ..vN............
+    Possible instruction pointers:
+
+49  Qt5Gui.dll + 0x1a00f7
+    rsp = 0x00000014ca0fba60   rip = 0x00007ffca9d800f7
+    Found by: stack scanning
+
+    Stack contents:
+     00000014ca0fba60 04 00 00 00 00 00 00 00 c0 bb 0f ca 14 00 00 00  ................
+     00000014ca0fba70 69 80 41 76 ed 87 00 00 00 e0 fc 49 16 01 00 00  i.Av.......I....
+     00000014ca0fba80 00 00 00 00 00 00 f0 3f 00 00 00 00 00 00 00 00  .......?........
+     00000014ca0fba90 04 00 00 00 00 00 00 00 87 4f f3 ac fc 7f 00 00  .........O......
+    Possible instruction pointers:
+
+50  Qt5Core.dll + 0x24f87
+    rsp = 0x00000014ca0fbaa0   rip = 0x00007ffcacf34f87
+    Found by: stack scanning
+
+    Stack contents:
+     00000014ca0fbaa0 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000014ca0fbab0 04 00 00 00 14 00 00 00 e8 bb 0f ca 14 00 00 00  ................
+     00000014ca0fbac0 80 bc 0f ca 14 00 00 00 50 73 ff 49 16 01 00 00  ........Ps.I....
+     00000014ca0fbad0 00 00 00 00 00 00 00 00 f0 90 76 4e 16 01 00 00  ..........vN....
+     00000014ca0fbae0 1e 02 00 00 00 00 00 00 24 db 0d ad fc 7f 00 00  ........$.......
+    Possible instruction pointers:
+
+51  Qt5Core.dll + 0x1cdb24
+    rsp = 0x00000014ca0fbaf0   rip = 0x00007ffcad0ddb24
+    Found by: stack scanning
+
+    Stack contents:
+     00000014ca0fbaf0 88 75 f5 49 16 01 00 00 20 1a fa 49 16 01 00 00  .u.I.... ..I....
+     00000014ca0fbb00 00 00 00 00 00 00 00 00 1e 02 00 00 00 00 00 00  ................
+     00000014ca0fbb10 00 00 00 00 00 00 00 00 9b ca bb 2d fd 7f 00 00  ...........-....
+    Possible instruction pointers:
+
+52  user32.dll + 0xca9b
+    rsp = 0x00000014ca0fbb20   rip = 0x00007ffd2dbbca9b
+    Found by: stack scanning
+
+    Stack contents:
+     00000014ca0fbb20 01 00 00 00 00 00 00 00 c6 10 05 00 00 00 00 00  ................
+     00000014ca0fbb30 20 bc 0f ca 14 00 00 00 00 00 00 00 00 00 00 00   ...............
+     00000014ca0fbb40 00 00 00 00 00 00 f0 3f 00 00 00 00 00 00 00 00  .......?........
+     00000014ca0fbb50 e0 d0 fd a9 fc 7f 00 00                          ........        
+    Possible instruction pointers:
+
+53  Qt5Gui.dll + 0x3fd0e0
+    rsp = 0x00000014ca0fbb58   rip = 0x00007ffca9fdd0e0
+    Found by: stack scanning
+
+    Stack contents:
+     00000014ca0fbb58 00 00 00 00 00 00 00 00 03 00 06 00 00 00 00 00  ................
+     00000014ca0fbb68 00 00 00 00 6f 0a 00 00 00 00 00 00 00 80 48 40  ....o.........H@
+     00000014ca0fbb78 00 00 00 00 00 00 35 40 00 00 00 00 00 e0 67 40  ......5@......g@
+     00000014ca0fbb88 00 00 00 00 00 60 71 40 00 00 00 00 00 dc 93 40  .....`q@.......@
+     00000014ca0fbb98 00 00 00 00 00 e0 89 40 01 00 00 00 00 00 00 00  .......@........
+     00000014ca0fbba8 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000014ca0fbbb8 00 00 00 00 00 00 00 00 e5 0f f7 41 df 30 00 00  ...........A.0..
+     00000014ca0fbbc8 3c 03 00 00 14 00 00 00 00 be 0f ca 14 00 00 00  <...............
+     00000014ca0fbbd8 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000014ca0fbbe8 15 02 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000014ca0fbbf8 00 00 00 00 00 00 00 00 c6 10 05 00 00 00 00 00  ................
+     00000014ca0fbc08 f0 32 52 4a 16 01 00 00 59 bd 0f ca 14 00 00 00  .2RJ....Y.......
+     00000014ca0fbc18 0d c9 bb 2d fd 7f 00 00                          ...-....        
+    Possible instruction pointers:
+
+54  user32.dll + 0xc90d
+    rsp = 0x00000014ca0fbc20   rip = 0x00007ffd2dbbc90d
+    Found by: stack scanning
+
+    Stack contents:
+     00000014ca0fbc20 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000014ca0fbc30 ce 62 82 60 2b c9 00 00 ee 66 bb af fc 7f 00 00  .b.`+....f......
+    Possible instruction pointers:
+
+55  Qt5Widgets.dll + 0xc66ee
+    rsp = 0x00000014ca0fbc40   rip = 0x00007ffcafbb66ee
+    Found by: stack scanning
+
+    Stack contents:
+     00000014ca0fbc40 f0 7d f7 49 16 01 00 00 00 00 00 00 00 00 00 00  .}.I............
+     00000014ca0fbc50 00 00 00 00 00 00 00 00 40 79 fc 49 16 01 00 00  ........@y.I....
+     00000014ca0fbc60 30 c6 0f ca 14 00 00 00 30 c6 0f ca 14 00 00 00  0.......0.......
+     00000014ca0fbc70 f0 7d f7 49 16 01 00 00 8e e3 b4 af fc 7f 00 00  .}.I............
+    Possible instruction pointers:
+
+56  Qt5Widgets.dll + 0x5e38e
+    rsp = 0x00000014ca0fbc80   rip = 0x00007ffcafb4e38e
+    Found by: stack scanning
+
+    Stack contents:
+     00000014ca0fbc80 1e 02 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000014ca0fbc90 40 79 fc 49 16 01 00 00 0e 4a 4c ce fc 7f 00 00  @y.I.....JL.....
+    Possible instruction pointers:
+
+57  qwindows.dll + 0x14a0e
+    rsp = 0x00000014ca0fbca0   rip = 0x00007ffcce4c4a0e
+    Found by: stack scanning
+
+    Stack contents:
+     00000014ca0fbca0 15 02 00 00 00 00 00 00 77 98 4a 2e fd 7f 00 00  ........w.J.....
+    Possible instruction pointers:
+
+58  ntdll.dll + 0x19877
+    rsp = 0x00000014ca0fbcb0   rip = 0x00007ffd2e4a9877
+    Found by: stack scanning
+
+    Stack contents:
+     00000014ca0fbcb0 00 00 00 00 00 00 00 00 50 4d 16 4a 16 01 00 00  ........PM.J....
+     00000014ca0fbcc0 00 00 00 00 00 00 00 00 40 79 fc 49 16 01 00 00  ........@y.I....
+     00000014ca0fbcd0 90 1c 20 ad fc 7f 00 00                          .. .....        
+    Possible instruction pointers:
+
+59  Qt5Core.dll + 0x2f1c90
+    rsp = 0x00000014ca0fbcd8   rip = 0x00007ffcad201c90
+    Found by: stack scanning
+
+    Stack contents:
+     00000014ca0fbcd8 f0 7d f7 49 16 01 00 00 30 c6 0f ca 14 00 00 00  .}.I....0.......
+     00000014ca0fbce8 32 4a 0e ad fc 7f 00 00                          2J......        
+    Possible instruction pointers:
+
+60  Qt5Core.dll + 0x1d4a32
+    rsp = 0x00000014ca0fbcf0   rip = 0x00007ffcad0e4a32
+    Found by: stack scanning
+
+    Stack contents:
+     00000014ca0fbcf0 30 f9 f8 49 16 01 00 00 87 4f f3 ac fc 7f 00 00  0..I.....O......
+    Possible instruction pointers:
+
+61  Qt5Core.dll + 0x24f87
+    rsp = 0x00000014ca0fbd00   rip = 0x00007ffcacf34f87
+    Found by: stack scanning
+
+    Stack contents:
+     00000014ca0fbd00 30 c6 0f ca 14 00 00 00 00 00 f4 49 16 01 00 00  0..........I....
+     00000014ca0fbd10 40 79 fc 49 16 01 00 00 5b 53 0e ad fc 7f 00 00  @y.I....[S......
+    Possible instruction pointers:
+
+62  Qt5Core.dll + 0x1d535b
+    rsp = 0x00000014ca0fbd20   rip = 0x00007ffcad0e535b
+    Found by: stack scanning
+
+    Stack contents:
+     00000014ca0fbd20 10 40 f7 49 16 01 00 00 00 00 00 00 00 00 00 00  .@.I............
+     00000014ca0fbd30 30 c6 0f ca 14 00 00 00 40 79 fc 49 16 01 00 00  0.......@y.I....
+     00000014ca0fbd40 10 40 f7 49 16 01 00 00 90 49 b0 af fc 7f 00 00  .@.I.....I......
+    Possible instruction pointers:
+
+63  Qt5Widgets.dll + 0x14990
+    rsp = 0x00000014ca0fbd50   rip = 0x00007ffcafb04990
+    Found by: stack scanning
+
+    Stack contents:
+     00000014ca0fbd50 10 40 f7 49 16 01 00 00 f0 7d f7 49 16 01 00 00  .@.I.....}.I....
+     00000014ca0fbd60 30 c6 0f ca 14 00 00 00 40 79 fc 49 16 01 00 00  0.......@y.I....
+     00000014ca0fbd70 c8 fa 0f ca 14 00 00 00 13 3a b0 af fc 7f 00 00  .........:......
+    Possible instruction pointers:
+
+64  Qt5Widgets.dll + 0x13a13
+    rsp = 0x00000014ca0fbd80   rip = 0x00007ffcafb03a13
+    Found by: stack scanning
+
+    Stack contents:
+     00000014ca0fbd80 10 40 f7 49 16 01 00 00 80 be 0f ca 14 00 00 00  .@.I............
+     00000014ca0fbd90 00 00 af af fc 7f 00 00 15 02 00 00 00 00 00 00  ................
+     00000014ca0fbda0 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000014ca0fbdb0 03 00 00 00 00 00 00 00 63 f1 bb 2d fd 7f 00 00  ........c..-....
+    Possible instruction pointers:
+
+65  user32.dll + 0xf163
+    rsp = 0x00000014ca0fbdc0   rip = 0x00007ffd2dbbf163
+    Found by: stack scanning
+
+    Stack contents:
+     00000014ca0fbdc0 80 84 77 4e 16 01 00 00 01 00 00 00 00 00 00 00  ..wN............
+     00000014ca0fbdd0 c6 10 05 00 00 00 00 00 12 00 00 80 00 00 00 00  ................
+     00000014ca0fbde0 38 04 00 00 26 02 00 00 c7 05 00 00 51 03 00 00  8...&.......Q...
+     00000014ca0fbdf0 b0 7d 00 aa fc 7f 00 00                          .}......        
+    Possible instruction pointers:
+
+66  Qt5Gui.dll + 0x427db0
+    rsp = 0x00000014ca0fbdf8   rip = 0x00007ffcaa007db0
+    Found by: stack scanning
+
+    Stack contents:
+     00000014ca0fbdf8 80 00 00 00 00 00 00 00 00 00 00 00 16 01 00 00  ................
+     00000014ca0fbe08 30 c6 0f ca 14 00 00 00 f0 7d f7 49 16 01 00 00  0........}.I....
+     00000014ca0fbe18 00 00 00 00 01 00 00 00 c8 fa 0f ca 14 00 00 00  ................
+     00000014ca0fbe28 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000014ca0fbe38 07 00 00 00 00 00 00 00 30 50 79 4e 16 01 00 00  ........0PyN....
+     00000014ca0fbe48 28 00 00 00 00 00 00 00 40 79 fc 49 16 01 00 00  (.......@y.I....
+     00000014ca0fbe58 07 00 00 07 00 00 00 00 40 52 80 4c 16 01 00 00  ........@R.L....
+     00000014ca0fbe68 67 05 00 62 20 00 00 00 10 00 00 00 00 00 00 00  g..b ...........
+     00000014ca0fbe78 02 00 00 02 00 00 00 00 20 00 00 00 00 00 00 00  ........ .......
+     00000014ca0fbe88 67 05 00 62 00 00 00 00 00 00 00 00 00 00 00 00  g..b............
+     00000014ca0fbe98 d0 c1 0f ca 14 00 00 00 60 3b 78 4e 16 01 00 00  ........`;xN....
+     00000014ca0fbea8 fb 50 73 27 fd 7f 00 00                          .Ps'....        
+    Possible instruction pointers:
+
+67  CoreMessaging.dll + 0x150fb
+    rsp = 0x00000014ca0fbeb0   rip = 0x00007ffd277350fb
+    Found by: stack scanning
+
+    Stack contents:
+     00000014ca0fbeb0 90 eb 16 4a 16 01 00 00 6b b8 4b 2e fd 7f 00 00  ...J....k.K.....
+    Possible instruction pointers:
+
+68  ntdll.dll + 0x2b86b
+    rsp = 0x00000014ca0fbec0   rip = 0x00007ffd2e4bb86b
+    Found by: stack scanning
+
+    Stack contents:
+     00000014ca0fbec0 20 00 2a 00 00 00 00 00 2f 00 00 00 00 00 00 00   .*...../.......
+     00000014ca0fbed0 e0 2b 78 4e 16 01 00 00 01 00 00 00 fc 7f 00 00  .+xN............
+     00000014ca0fbee0 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000014ca0fbef0 00 00 00 00 00 00 00 00 c0 30 e9 49 16 01 00 00  .........0.I....
+     00000014ca0fbf00 ff ff ff ff ff ff ff ff 00 00 e9 49 16 01 00 00  ...........I....
+     00000014ca0fbf10 c0 02 e9 49 16 01 00 00 01 00 00 00 00 00 00 00  ...I............
+     00000014ca0fbf20 80 00 00 00 00 00 00 00 c0 0c e9 49 16 01 00 00  ...........I....
+     00000014ca0fbf30 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000014ca0fbf40 00 00 00 00 00 00 00 00 80 00 00 00 00 00 00 00  ................
+     00000014ca0fbf50 70 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00  p...............
+     00000014ca0fbf60 00 00 f4 49 16 01 00 00 29 c0 0f ca 14 00 00 00  ...I....).......
+     00000014ca0fbf70 08 00 00 00 00 00 00 00 c7 b3 4b 2e fd 7f 00 00  ..........K.....
+    Possible instruction pointers:
+
+69  ntdll.dll + 0x2b3c7
+    rsp = 0x00000014ca0fbf80   rip = 0x00007ffd2e4bb3c7
+    Found by: stack scanning
+
+    Stack contents:
+     00000014ca0fbf80 00 00 e9 49 16 01 00 00 00 00 00 00 fd 7f 00 00  ...I............
+     00000014ca0fbf90 70 00 00 00 00 00 00 00 00 00 00 00 14 00 00 00  p...............
+     00000014ca0fbfa0 00 00 00 00 00 00 00 00 4b 16 bd 2d fd 7f 00 00  ........K..-....
+    Possible instruction pointers:
+
+70  user32.dll + 0x2164b
+    rsp = 0x00000014ca0fbfb0   rip = 0x00007ffd2dbd164b
+    Found by: stack scanning
+
+    Stack contents:
+     00000014ca0fbfb0 00 00 00 00 02 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000014ca0fbfc0 00 00 00 00 00 00 00 00 60 04 00 00 00 00 00 00  ........`.......
+     00000014ca0fbfd0 f0 45 4c ce fc 7f 00 00                          .EL.....        
+    Possible instruction pointers:
+
+71  qwindows.dll + 0x145f0
+    rsp = 0x00000014ca0fbfd8   rip = 0x00007ffcce4c45f0
+    Found by: stack scanning
+
+    Stack contents:
+     00000014ca0fbfd8 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000014ca0fbfe8 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000014ca0fbff8 70 10 c4 2d fd 7f 00 00                          p..-....        
+    Possible instruction pointers:
+
+72  user32.dll + 0x91070
+    rsp = 0x00000014ca0fc000   rip = 0x00007ffd2dc41070
+    Found by: stack scanning
+
+    Stack contents:
+     00000014ca0fc000 70 c1 0f ca 14 00 00 00 e4 13 53 2e fd 7f 00 00  p.........S.....
+    Possible instruction pointers:
+
+73  ntdll.dll + 0xa13e4
+    rsp = 0x00000014ca0fc010   rip = 0x00007ffd2e5313e4
+    Found by: stack scanning
+
+    Stack contents:
+     00000014ca0fc010 ec ff ff ff 00 00 00 00 c6 10 05 00 00 00 00 00  ................
+     00000014ca0fc020 20 1a fa 49 16 01 00 00 64 1b bd 2d fd 7f 00 00   ..I....d..-....
+    Possible instruction pointers:
+
+74  user32.dll + 0x21b64
+    rsp = 0x00000014ca0fc030   rip = 0x00007ffd2dbd1b64
+    Found by: stack scanning
+
+    Stack contents:
+     00000014ca0fc030 68 c0 0f ca 14 00 00 00 30 00 00 00 02 00 00 00  h.......0.......
+     00000014ca0fc040 e4 10 ee 2b fd 7f 00 00                          ...+....        
+    Possible instruction pointers:
+
+75  win32u.dll + 0x10e4
+    rsp = 0x00000014ca0fc048   rip = 0x00007ffd2bee10e4
+    Found by: stack scanning
+
+    Stack contents:
+     00000014ca0fc048 bb 26 bc 2d fd 7f 00 00                          .&.-....        
+    Possible instruction pointers:
+
+76  user32.dll + 0x126bb
+    rsp = 0x00000014ca0fc050   rip = 0x00007ffd2dbc26bb
+    Found by: stack scanning
+
+    Stack contents:
+     00000014ca0fc050 70 0c f8 49 16 01 00 00 40 79 fc 49 16 01 00 00  p..I....@y.I....
+     00000014ca0fc060 40 79 fc 49 16 01 00 00 bf 00 00 00 00 00 00 00  @y.I............
+     00000014ca0fc070 40 c2 0f ca 14 00 00 00 40 79 fc 49 16 01 00 00  @.......@y.I....
+     00000014ca0fc080 40 79 fc 49 16 01 00 00 95 d7 12 ad fc 7f 00 00  @y.I............
+    Possible instruction pointers:
+
+77  Qt5Core.dll + 0x21d795
+    rsp = 0x00000014ca0fc090   rip = 0x00007ffcad12d795
+    Found by: stack scanning
+
+    Stack contents:
+     00000014ca0fc090 00 00 00 00 00 00 00 00 c0 e7 78 4e 16 01 00 00  ..........xN....
+     00000014ca0fc0a0 6f 0a 00 00 00 00 00 00 40 79 fc 49 16 01 00 00  o.......@y.I....
+     00000014ca0fc0b0 40 c2 0f ca 14 00 00 00 6c a0 c0 a9 fc 7f 00 00  @.......l.......
+    Possible instruction pointers:
+
+78  Qt5Gui.dll + 0x2a06c
+    rsp = 0x00000014ca0fc0c0   rip = 0x00007ffca9c0a06c
+    Found by: stack scanning
+
+    Stack contents:
+     00000014ca0fc0c0 c0 e7 78 4e 16 01 00 00 40 79 fc 49 16 01 00 00  ..xN....@y.I....
+     00000014ca0fc0d0 00 00 00 00 00 00 f0 3f c0 e7 78 4e 16 01 00 00  .......?..xN....
+     00000014ca0fc0e0 c0 e7 78 4e 16 01 00 00 43 8d c0 a9 fc 7f 00 00  ..xN....C.......
+    Possible instruction pointers:
+
+79  Qt5Gui.dll + 0x28d43
+    rsp = 0x00000014ca0fc0f0   rip = 0x00007ffca9c08d43
+    Found by: stack scanning
+
+    Stack contents:
+     00000014ca0fc0f0 48 e1 24 aa fc 7f 00 00                          H.$.....        
+    Possible instruction pointers:
+
+80  Qt5Gui.dll + 0x66e148
+    rsp = 0x00000014ca0fc0f8   rip = 0x00007ffcaa24e148
+    Found by: stack scanning
+
+    Stack contents:
+     00000014ca0fc0f8 30 c2 0f ca 14 00 00 00 40 79 fc 49 16 01 00 00  0.......@y.I....
+     00000014ca0fc108 af c7 4c ce fc 7f 00 00                          ..L.....        
+    Possible instruction pointers:
+
+81  qwindows.dll + 0x1c7af
+    rsp = 0x00000014ca0fc110   rip = 0x00007ffcce4cc7af
+    Found by: stack scanning
+
+    Stack contents:
+     00000014ca0fc110 00 00 00 00 00 dc 93 40 00 00 00 00 00 e0 89 40  .......@.......@
+     00000014ca0fc120 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000014ca0fc130 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000014ca0fc140 40 c2 0f ca 14 00 00 00 b5 8b c0 a9 fc 7f 00 00  @...............
+    Possible instruction pointers:
+
+82  Qt5Gui.dll + 0x28bb5
+    rsp = 0x00000014ca0fc150   rip = 0x00007ffca9c08bb5
+    Found by: stack scanning
+
+    Stack contents:
+     00000014ca0fc150 00 00 00 00 00 00 00 00 40 79 fc 49 16 01 00 00  ........@y.I....
+     00000014ca0fc160 30 c2 0f ca 14 00 00 00 b0 c2 0f ca 14 00 00 00  0...............
+     00000014ca0fc170 00 00 00 00 16 01 00 00 01 00 00 00 16 01 00 00  ................
+     00000014ca0fc180 03 00 00 00 00 00 00 00 00 00 00 00 3c 03 00 00  ............<...
+     00000014ca0fc190 00 00 00 00 00 00 00 00 03 00 00 00 01 00 00 00  ................
+     00000014ca0fc1a0 f7 04 00 00 3c 03 00 00 9d d6 4c ce fc 7f 00 00  ....<.....L.....
+    Possible instruction pointers:
+
+83  qwindows.dll + 0x1d69d
+    rsp = 0x00000014ca0fc1b0   rip = 0x00007ffcce4cd69d
+    Found by: stack scanning
+
+    Stack contents:
+     00000014ca0fc1b0 03 00 00 00 01 00 00 00 b0 c2 0f ca 14 00 00 00  ................
+     00000014ca0fc1c0 00 00 00 00 00 00 00 00 f7 04 00 00 3c 03 00 00  ............<...
+     00000014ca0fc1d0 01 00 00 00 00 00 00 00 03 00 00 00 00 00 00 00  ................
+     00000014ca0fc1e0 00 00 00 00 00 00 00 00 00 00 00 00 14 00 00 00  ................
+     00000014ca0fc1f0 03 00 00 00 01 00 00 00 00 ad 8c 2c fd 7f 00 00  ...........,....
+    Possible instruction pointers:
+
+84  msvcrt.dll + 0x4ad00
+    rsp = 0x00000014ca0fc200   rip = 0x00007ffd2c8cad00
+    Found by: stack scanning
+
+    Stack contents:
+     00000014ca0fc200 f7 04 00 00 3c 03 00 00 00 00 00 00 00 00 00 00  ....<...........
+     00000014ca0fc210 16 01 00 00 14 00 00 00 40 79 fc 49 16 01 00 00  ........@y.I....
+     00000014ca0fc220 f7 04 00 00 3c 03 00 00 02 02 00 00 ff ff ff ff  ....<...........
+     00000014ca0fc230 00 00 00 00 00 e0 67 40 00 00 00 00 00 60 71 40  ......g@.....`q@
+     00000014ca0fc240 00 00 00 00 00 dc 93 40 00 00 00 00 00 e0 89 40  .......@.......@
+     00000014ca0fc250 be 67 82 60 2b c9 00 00 f7 04 00 00 3c 03 00 00  .g.`+.......<...
+     00000014ca0fc260 00 00 00 00 00 00 00 80 00 00 00 00 00 00 00 00  ................
+     00000014ca0fc270 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000014ca0fc280 c0 e7 78 4e 16 01 00 00 40 79 fc 49 16 01 00 00  ..xN....@y.I....
+     00000014ca0fc290 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000014ca0fc2a0 01 00 00 00 00 00 00 00 40 79 fc 49 16 01 00 00  ........@y.I....
+     00000014ca0fc2b0 30 c6 0f ca 14 00 00 00 ca 2a 0e ad fc 7f 00 00  0........*......
+    Possible instruction pointers:
+
+85  Qt5Core.dll + 0x1d2aca
+    rsp = 0x00000014ca0fc2c0   rip = 0x00007ffcad0e2aca
+    Found by: stack scanning
+
+    Stack contents:
+     00000014ca0fc2c0 70 93 f7 49 16 01 00 00 28 00 00 00 00 00 00 00  p..I....(.......
+     00000014ca0fc2d0 ec ff ff ff 00 00 00 00 60 7b f4 49 16 01 00 00  ........`{.I....
+     00000014ca0fc2e0 00 c4 0f ca 14 00 00 00 60 7b f4 49 16 01 00 00  ........`{.I....
+     00000014ca0fc2f0 40 79 fc 49 16 01 00 00 30 c6 0f ca 14 00 00 00  @y.I....0.......
+     00000014ca0fc300 e0 c2 0f ca 14 00 00 00 17 bc b7 e0 24 9c 00 00  ............$...
+     00000014ca0fc310 d0 1d f9 49 16 01 00 00 03 00 00 00 00 00 00 00  ...I............
+     00000014ca0fc320 30 c4 0f ca 14 00 00 00 b6 32 c2 a9 fc 7f 00 00  0........2......
+    Possible instruction pointers:
+
+86  Qt5Gui.dll + 0x432b6
+    rsp = 0x00000014ca0fc330   rip = 0x00007ffca9c232b6
+    Found by: stack scanning
+
+Thread 1
+ 0  ntdll.dll + 0xa0ff4
+    rax = 0x00000000000001d5   rdx = 0x0000011649f47240
+    rcx = 0x000000000000006c   rbx = 0x0000011649f475c0
+    rsi = 0x0000011649f45020   rdi = 0x0000011649f475c0
+    rbp = 0x0000000000000000   rsp = 0x00000014ca1ffa28
+     r8 = 0x00000000000000f8    r9 = 0x00000014ca1ff4d0
+    r10 = 0x00007ffd2b0000f8   r11 = 0x0000000000000001
+    r12 = 0x0000000000000000   r13 = 0x0000000000000000
+    r14 = 0x0000000000000000   r15 = 0x0000000000000000
+    rip = 0x00007ffd2e530ff4
+    Found by: given as instruction pointer in context
+
+    Stack contents:
+     00000014ca1ffa28 07 d4 4d 2e fd 7f 00 00                          ..M.....        
+    Possible instruction pointers:
+
+ 1  ntdll.dll + 0x4d407
+    rsp = 0x00000014ca1ffa30   rip = 0x00007ffd2e4dd407
+    Found by: stack scanning
+
+Thread 2
+ 0  ntdll.dll + 0xa0ff4
+    rax = 0x00000000000001d5   rdx = 0x0000011649f47f30
+    rcx = 0x000000000000006c   rbx = 0x0000011649f482b0
+    rsi = 0x0000011649f45020   rdi = 0x0000011649f482b0
+    rbp = 0x0000000000000000   rsp = 0x00000014ca2ff948
+     r8 = 0x000000000000000c    r9 = 0x0000000000000013
+    r10 = 0x0000000000000000   r11 = 0xb5800000000002c7
+    r12 = 0x0000000000000000   r13 = 0x0000000000000000
+    r14 = 0x0000000000000000   r15 = 0x0000000000000000
+    rip = 0x00007ffd2e530ff4
+    Found by: given as instruction pointer in context
+
+    Stack contents:
+     00000014ca2ff948 07 d4 4d 2e fd 7f 00 00                          ..M.....        
+    Possible instruction pointers:
+
+ 1  ntdll.dll + 0x4d407
+    rsp = 0x00000014ca2ff950   rip = 0x00007ffd2e4dd407
+    Found by: stack scanning
+
+Thread 3
+ 0  ntdll.dll + 0xa0ff4
+    rax = 0x00000000000001d5   rdx = 0x0000011649f4b6d0
+    rcx = 0x000000000000006c   rbx = 0x0000011649f4ba50
+    rsi = 0x0000011649f45020   rdi = 0x0000011649f4ba50
+    rbp = 0x0000000000000000   rsp = 0x00000014ca3ff948
+     r8 = 0x00000014ca3ff0b0    r9 = 0x0000011649f45624
+    r10 = 0x000000000000006c   r11 = 0x00000014ca3feeb0
+    r12 = 0x0000000000000000   r13 = 0x0000000000000000
+    r14 = 0x0000000000000000   r15 = 0x0000000000000000
+    rip = 0x00007ffd2e530ff4
+    Found by: given as instruction pointer in context
+
+    Stack contents:
+     00000014ca3ff948 07 d4 4d 2e fd 7f 00 00                          ..M.....        
+    Possible instruction pointers:
+
+ 1  ntdll.dll + 0x4d407
+    rsp = 0x00000014ca3ff950   rip = 0x00007ffd2e4dd407
+    Found by: stack scanning
+
+Thread 4
+ 0  ntdll.dll + 0x9d5e4
+    rax = 0x0000000000000004   rdx = 0x0000000000000000
+    rcx = 0x00000000000001f4   rbx = 0x0000000000000000
+    rsi = 0x00000014ca4ffc98   rdi = 0x00000000000001f4
+    rbp = 0x0000000000000000   rsp = 0x00000014ca4ffc68
+     r8 = 0x0000000000000000    r9 = 0x0000000000000000
+    r10 = 0x0000000000000000   r11 = 0x0000000000000000
+    r12 = 0x0000000000000000   r13 = 0x0000000000000000
+    r14 = 0x00000000000001f4   r15 = 0x4454535256434d44
+    rip = 0x00007ffd2e52d5e4
+    Found by: given as instruction pointer in context
+
+    Stack contents:
+     00000014ca4ffc68 0e 92 c0 2b fd 7f 00 00                          ...+....        
+    Possible instruction pointers:
+
+ 1  KERNELBASE.dll + 0x2920e
+    rsp = 0x00000014ca4ffc70   rip = 0x00007ffd2bc0920e
+    Found by: stack scanning
+
+    Stack contents:
+     00000014ca4ffc70 f0 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000014ca4ffc80 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000014ca4ffc90 02 01 00 00 14 00 00 00 00 d3 ce fe ff ff ff ff  ................
+     00000014ca4ffca0 48 00 00 00 00 00 00 00 01 00 00 00 14 00 00 00  H...............
+     00000014ca4ffcb0 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000014ca4ffcc0 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000014ca4ffcd0 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000014ca4ffce0 00 00 00 00 00 00 00 00 00 00 91 4b 16 01 00 00  ...........K....
+     00000014ca4ffcf0 00 00 00 00 00 00 00 00 f0 01 00 00 00 00 00 00  ................
+     00000014ca4ffd00 00 00 91 4b 16 01 00 00 9c 72 ad 2b fd 7f 00 00  ...K.....r.+....
+    Possible instruction pointers:
+
+ 2  dtrampo.dll + 0x729c
+    rsp = 0x00000014ca4ffd10   rip = 0x00007ffd2bad729c
+    Found by: stack scanning
+
+    Stack contents:
+     00000014ca4ffd10 f4 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000014ca4ffd20 00 00 00 00 00 00 00 00 f4 01 00 00 00 00 00 00  ................
+     00000014ca4ffd30 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000014ca4ffd40 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000014ca4ffd50 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000014ca4ffd60 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000014ca4ffd70 00 00 00 00 00 00 00 00 74 73 8c 2d fd 7f 00 00  ........ts.-....
+    Possible instruction pointers:
+
+ 3  kernel32.dll + 0x17374
+    rsp = 0x00000014ca4ffd80   rip = 0x00007ffd2d8c7374
+    Found by: stack scanning
+
+    Stack contents:
+     00000014ca4ffd80 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000014ca4ffd90 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000014ca4ffda0 00 00 00 00 00 00 00 00 91 cc 4d 2e fd 7f 00 00  ..........M.....
+    Possible instruction pointers:
+
+ 4  ntdll.dll + 0x4cc91
+    rsp = 0x00000014ca4ffdb0   rip = 0x00007ffd2e4dcc91
+    Found by: stack scanning
+
+Thread 5
+ 0  ntdll.dll + 0xa0ff4
+    rax = 0x00000000000001d5   rdx = 0x0000011649f8f040
+    rcx = 0x0000000000000014   rbx = 0x0000011649f8f3c0
+    rsi = 0x0000011649f40b50   rdi = 0x0000011649f8f3c0
+    rbp = 0x0000000000000000   rsp = 0x00000014ca5ff7e8
+     r8 = 0x00000014ca5ff170    r9 = 0x00007ffd2c3c0000
+    r10 = 0x0000011649f8f418   r11 = 0x00000014ca5ff184
+    r12 = 0x0000000000000000   r13 = 0x0000000000000000
+    r14 = 0x0000000000000000   r15 = 0x0000000000000000
+    rip = 0x00007ffd2e530ff4
+    Found by: given as instruction pointer in context
+
+    Stack contents:
+     00000014ca5ff7e8 07 d4 4d 2e fd 7f 00 00                          ..M.....        
+    Possible instruction pointers:
+
+ 1  ntdll.dll + 0x4d407
+    rsp = 0x00000014ca5ff7f0   rip = 0x00007ffd2e4dd407
+    Found by: stack scanning
+
+Thread 6
+ 0  ntdll.dll + 0xa0ff4
+    rax = 0x00000000000001d5   rdx = 0x0000011649f90f90
+    rcx = 0x0000000000000014   rbx = 0x0000011649f91310
+    rsi = 0x0000011649f40b50   rdi = 0x0000011649f91310
+    rbp = 0x0000000000000000   rsp = 0x00000014ca6ffb08
+     r8 = 0x0000000000000000    r9 = 0x0000011649f40000
+    r10 = 0x0000000000000000   r11 = 0x00000014ca6ff601
+    r12 = 0x0000000000000000   r13 = 0x0000000000000000
+    r14 = 0x0000000000000000   r15 = 0x0000000000000000
+    rip = 0x00007ffd2e530ff4
+    Found by: given as instruction pointer in context
+
+    Stack contents:
+     00000014ca6ffb08 07 d4 4d 2e fd 7f 00 00                          ..M.....        
+    Possible instruction pointers:
+
+ 1  ntdll.dll + 0x4d407
+    rsp = 0x00000014ca6ffb10   rip = 0x00007ffd2e4dd407
+    Found by: stack scanning
+
+Thread 7
+ 0  ntdll.dll + 0x9e0b4
+    rax = 0x000000000000005b   rdx = 0x000001164a03e3b0
+    rcx = 0x0000000000000001   rbx = 0x0000000000000001
+    rsi = 0x0000000000000000   rdi = 0x0000000000000001
+    rbp = 0x0000000000000000   rsp = 0x00000014ca7ff578
+     r8 = 0x0000000000000000    r9 = 0x0000000000003a98
+    r10 = 0x0000000000000000   r11 = 0x0000000000000000
+    r12 = 0x0000000000003a98   r13 = 0x000001164a03e3b0
+    r14 = 0x00000014ca7ff5d0   r15 = 0x0000000000000000
+    rip = 0x00007ffd2e52e0b4
+    Found by: given as instruction pointer in context
+
+    Stack contents:
+     00000014ca7ff578 30 40 c4 2b fd 7f 00 00                          0@.+....        
+    Possible instruction pointers:
+
+ 1  KERNELBASE.dll + 0x64030
+    rsp = 0x00000014ca7ff580   rip = 0x00007ffd2bc44030
+    Found by: stack scanning
+
+Thread 8
+ 0  ntdll.dll + 0x9e0b4
+    rax = 0x000000000000005b   rdx = 0x00000014ca8ff5a0
+    rcx = 0x0000000000000001   rbx = 0x0000000000000001
+    rsi = 0x0000000000000000   rdi = 0x0000000000000001
+    rbp = 0x00000000000003b8   rsp = 0x00000014ca8ff258
+     r8 = 0x000001164a0188a0    r9 = 0x00007ffd2dedcf30
+    r10 = 0x0000000000000000   r11 = 0x0000000000000000
+    r12 = 0x00000000ffffffff   r13 = 0x00000014ca8ff5a0
+    r14 = 0x0000000000000000   r15 = 0x0000000000000000
+    rip = 0x00007ffd2e52e0b4
+    Found by: given as instruction pointer in context
+
+    Stack contents:
+     00000014ca8ff258 30 40 c4 2b fd 7f 00 00                          0@.+....        
+    Possible instruction pointers:
+
+ 1  KERNELBASE.dll + 0x64030
+    rsp = 0x00000014ca8ff260   rip = 0x00007ffd2bc44030
+    Found by: stack scanning
+
+    Stack contents:
+     00000014ca8ff260 10 06 66 2c fd 7f 00 00                          ..f,....        
+    Possible instruction pointers:
+
+ 2  msctf.dll + 0x40610
+    rsp = 0x00000014ca8ff268   rip = 0x00007ffd2c660610
+    Found by: stack scanning
+
+    Stack contents:
+     00000014ca8ff268 55 79 4a 2e fd 7f 00 00                          UyJ.....        
+    Possible instruction pointers:
+
+ 3  ntdll.dll + 0x17955
+    rsp = 0x00000014ca8ff270   rip = 0x00007ffd2e4a7955
+    Found by: stack scanning
+
+    Stack contents:
+     00000014ca8ff270 d0 c4 5f 2e fd 7f 00 00                          .._.....        
+    Possible instruction pointers:
+
+ 4  ntdll.dll + 0x16c4d0
+    rsp = 0x00000014ca8ff278   rip = 0x00007ffd2e5fc4d0
+    Found by: stack scanning
+
+    Stack contents:
+     00000014ca8ff278 00 60 e8 c9 14 00 00 00 00 00 00 00 00 00 00 00  .`..............
+     00000014ca8ff288 10 06 66 2c fd 7f 00 00                          ..f,....        
+    Possible instruction pointers:
+
+ 5  msctf.dll + 0x40610
+    rsp = 0x00000014ca8ff290   rip = 0x00007ffd2c660610
+    Found by: stack scanning
+
+    Stack contents:
+     00000014ca8ff290 d0 c8 fc 49 16 01 00 00 00 60 e8 c9 14 00 00 00  ...I.....`......
+     00000014ca8ff2a0 01 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00  ................
+     00000014ca8ff2b0 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000014ca8ff2c0 48 00 00 00 00 00 00 00 01 00 00 00 ff ff ff ff  H...............
+     00000014ca8ff2d0 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000014ca8ff2e0 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000014ca8ff2f0 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000014ca8ff300 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000014ca8ff310 70 00 00 00 00 00 00 00 ff ff ff ff ff ff ff ff  p...............
+     00000014ca8ff320 ff ff ff ff ff ff ff ff 1d 79 4a 2e fd 7f 00 00  .........yJ.....
+    Possible instruction pointers:
+
+ 6  ntdll.dll + 0x1791d
+    rsp = 0x00000014ca8ff330   rip = 0x00007ffd2e4a791d
+    Found by: stack scanning
+
+    Stack contents:
+     00000014ca8ff330 3d 79 4a 2e fd 7f 00 00                          =yJ.....        
+    Possible instruction pointers:
+
+ 7  ntdll.dll + 0x1793d
+    rsp = 0x00000014ca8ff338   rip = 0x00007ffd2e4a793d
+    Found by: stack scanning
+
+    Stack contents:
+     00000014ca8ff338 00 00 00 00 00 00 00 00 00 60 e8 c9 14 00 00 00  .........`......
+     00000014ca8ff348 bd 60 50 2e fd 7f 00 00                          .`P.....        
+    Possible instruction pointers:
+
+ 8  ntdll.dll + 0x760bd
+    rsp = 0x00000014ca8ff350   rip = 0x00007ffd2e5060bd
+    Found by: stack scanning
+
+    Stack contents:
+     00000014ca8ff350 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000014ca8ff360 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000014ca8ff370 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000014ca8ff380 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000014ca8ff390 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000014ca8ff3a0 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000014ca8ff3b0 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000014ca8ff3c0 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000014ca8ff3d0 70 f4 8f ca 14 00 00 00 00 00 00 00 00 00 00 00  p...............
+     00000014ca8ff3e0 00 00 49 2e fd 7f 00 00 83 5c 50 2e fd 7f 00 00  ..I......\P.....
+    Possible instruction pointers:
+
+ 9  ntdll.dll + 0x75c83
+    rsp = 0x00000014ca8ff3f0   rip = 0x00007ffd2e505c83
+    Found by: stack scanning
+
+    Stack contents:
+     00000014ca8ff3f0 00 00 00 00 00 00 00 00 00 00 49 2e fd 7f 00 00  ..........I.....
+     00000014ca8ff400 00 00 00 00 00 00 00 00 00 b0 e9 c9 14 00 00 00  ................
+     00000014ca8ff410 00 00 00 00 00 00 00 00 38 5c 50 2e fd 7f 00 00  ........8\P.....
+    Possible instruction pointers:
+
+10  ntdll.dll + 0x75c38
+    rsp = 0x00000014ca8ff420   rip = 0x00007ffd2e505c38
+    Found by: stack scanning
+
+    Stack contents:
+     00000014ca8ff420 70 f4 8f ca 14 00 00 00 00 00 00 00 00 00 00 00  p...............
+     00000014ca8ff430 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000014ca8ff440 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000014ca8ff450 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000014ca8ff460 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000014ca8ff470 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000014ca8ff480 00 00 00 00 00 00 00 00 10 19 4e 2e fd 7f 00 00  ..........N.....
+    Possible instruction pointers:
+
+11  ntdll.dll + 0x51910
+    rsp = 0x00000014ca8ff490   rip = 0x00007ffd2e4e1910
+    Found by: stack scanning
+
+    Stack contents:
+     00000014ca8ff490 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000014ca8ff4a0 1b 00 10 00 80 1f 00 00 33 00 00 00 00 00 00 00  ........3.......
+     00000014ca8ff4b0 00 00 2b 00 00 02 00 00 00 00 00 00 00 00 00 00  ..+.............
+     00000014ca8ff4c0 ee a7 b4 43 06 5f 00 00 4c df 4b 2e fd 7f 00 00  ...C._..L.K.....
+    Possible instruction pointers:
+
+12  ntdll.dll + 0x2df4c
+    rsp = 0x00000014ca8ff4d0   rip = 0x00007ffd2e4bdf4c
+    Found by: stack scanning
+
+    Stack contents:
+     00000014ca8ff4d0 00 00 00 00 00 00 00 00 40 c0 c4 2b fd 7f 00 00  ........@..+....
+    Possible instruction pointers:
+
+13  KERNELBASE.dll + 0x6c040
+    rsp = 0x00000014ca8ff4e0   rip = 0x00007ffd2bc4c040
+    Found by: stack scanning
+
+    Stack contents:
+     00000014ca8ff4e0 00 00 00 00 16 01 00 00 f8 6d 83 4e 16 01 00 00  .........m.N....
+     00000014ca8ff4f0 30 cf ed 2d fd 7f 00 00                          0..-....        
+    Possible instruction pointers:
+
+14  combase.dll + 0xccf30
+    rsp = 0x00000014ca8ff4f8   rip = 0x00007ffd2dedcf30
+    Found by: stack scanning
+
+    Stack contents:
+     00000014ca8ff4f8 a0 88 01 4a 16 01 00 00 00 ba 3c dc ff ff ff ff  ...J......<.....
+     00000014ca8ff508 00 00 00 00 00 00 00 00 c9 bf 66 dc 6e 4a 00 00  ..........f.nJ..
+     00000014ca8ff518 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000014ca8ff528 30 f8 8f ca 14 00 00 00 00 00 00 00 00 00 00 00  0...............
+     00000014ca8ff538 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000014ca8ff548 46 d3 ed 2d fd 7f 00 00                          F..-....        
+    Possible instruction pointers:
+
+15  combase.dll + 0xcd346
+    rsp = 0x00000014ca8ff550   rip = 0x00007ffd2dedd346
+    Found by: stack scanning
+
+    Stack contents:
+     00000014ca8ff550 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000014ca8ff560 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000014ca8ff570 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000014ca8ff580 a0 0f 00 00 00 00 00 00 80 1f 00 00 ff ff 00 00  ................
+     00000014ca8ff590 00 ba 3c dc ff ff ff ff 00 00 00 00 00 00 00 00  ..<.............
+     00000014ca8ff5a0 b8 03 00 00 00 00 00 00 25 00 00 00 00 00 00 00  ........%.......
+     00000014ca8ff5b0 10 1e 00 4a 16 01 00 00 43 00 00 00 00 00 00 00  ...J....C.......
+     00000014ca8ff5c0 2c 03 f4 49 16 01 00 00 50 01 f4 49 16 01 00 00  ,..I....P..I....
+     00000014ca8ff5d0 00 00 00 00 00 00 00 00 6b b8 4b 2e fd 7f 00 00  ........k.K.....
+    Possible instruction pointers:
+
+16  ntdll.dll + 0x2b86b
+    rsp = 0x00000014ca8ff5e0   rip = 0x00007ffd2e4bb86b
+    Found by: stack scanning
+
+    Stack contents:
+     00000014ca8ff5e0 f1 02 7e 01 00 00 00 00 6b 00 00 00 00 00 00 00  ..~.....k.......
+     00000014ca8ff5f0 d0 22 fe 49 16 01 00 00 43 00 00 00 00 00 00 00  .".I....C.......
+     00000014ca8ff600 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000014ca8ff610 00 00 00 00 00 00 00 00 00 2d e9 49 16 01 00 00  .........-.I....
+     00000014ca8ff620 00 00 00 00 00 00 00 00 00 00 e9 49 16 01 00 00  ...........I....
+     00000014ca8ff630 b0 02 e9 49 16 01 00 00 6a 00 00 00 00 00 00 00  ...I....j.......
+     00000014ca8ff640 40 00 00 00 00 00 00 00 c0 0c e9 49 16 01 00 00  @..........I....
+     00000014ca8ff650 d8 00 00 d8 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000014ca8ff660 00 00 00 00 00 00 00 00 40 00 00 00 00 00 00 00  ........@.......
+     00000014ca8ff670 30 00 00 00 00 00 00 00 10 00 00 00 00 00 00 00  0...............
+     00000014ca8ff680 00 00 f4 49 16 01 00 00 49 f7 8f ca 14 00 00 00  ...I....I.......
+     00000014ca8ff690 04 00 00 00 00 00 00 00 c7 b3 4b 2e fd 7f 00 00  ..........K.....
+    Possible instruction pointers:
+
+17  ntdll.dll + 0x2b3c7
+    rsp = 0x00000014ca8ff6a0   rip = 0x00007ffd2e4bb3c7
+    Found by: stack scanning
+
+    Stack contents:
+     00000014ca8ff6a0 00 00 e9 49 16 01 00 00 00 00 00 00 00 00 00 00  ...I............
+     00000014ca8ff6b0 30 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  0...............
+     00000014ca8ff6c0 10 02 00 00 00 00 00 00 10 19 4e 2e fd 7f 00 00  ..........N.....
+    Possible instruction pointers:
+
+18  ntdll.dll + 0x51910
+    rsp = 0x00000014ca8ff6d0   rip = 0x00007ffd2e4e1910
+    Found by: stack scanning
+
+    Stack contents:
+     00000014ca8ff6d0 00 00 f4 49 02 00 00 00 99 f7 8f ca 14 00 00 00  ...I............
+     00000014ca8ff6e0 22 00 00 00 00 00 00 00 c7 b3 4b 2e fd 7f 00 00  ".........K.....
+    Possible instruction pointers:
+
+19  ntdll.dll + 0x2b3c7
+    rsp = 0x00000014ca8ff6f0   rip = 0x00007ffd2e4bb3c7
+    Found by: stack scanning
+
+    Stack contents:
+     00000014ca8ff6f0 00 00 e9 49 16 01 00 00 10 19 4e 2e fd 7f 00 00  ...I......N.....
+    Possible instruction pointers:
+
+20  ntdll.dll + 0x51910
+    rsp = 0x00000014ca8ff700   rip = 0x00007ffd2e4e1910
+    Found by: stack scanning
+
+    Stack contents:
+     00000014ca8ff700 ae a5 b4 43 06 5f 00 00 00 00 00 00 16 01 00 00  ...C._..........
+     00000014ca8ff710 25 00 00 00 00 00 00 00 1c 6f c4 2b fd 7f 00 00  %........o.+....
+    Possible instruction pointers:
+
+21  KERNELBASE.dll + 0x66f1c
+    rsp = 0x00000014ca8ff720   rip = 0x00007ffd2bc46f1c
+    Found by: stack scanning
+
+    Stack contents:
+     00000014ca8ff720 00 00 00 00 02 00 00 00 02 00 00 00 00 00 00 00  ................
+     00000014ca8ff730 7e a4 b4 43 06 5f 00 00 00 00 00 00 00 00 00 00  ~..C._..........
+     00000014ca8ff740 02 00 10 00 00 00 00 00 9a 9f c1 2b fd 7f 00 00  ...........+....
+    Possible instruction pointers:
+
+22  KERNELBASE.dll + 0x39f9a
+    rsp = 0x00000014ca8ff750   rip = 0x00007ffd2bc19f9a
+    Found by: stack scanning
+
+    Stack contents:
+     00000014ca8ff750 00 00 00 00 00 00 00 00 b4 03 00 00 00 00 00 00  ................
+     00000014ca8ff760 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000014ca8ff770 00 00 00 ff ff ff ff ff ff ff ff 00 00 00 00 00  ................
+     00000014ca8ff780 00 00 00 00 00 00 00 00 b8 03 00 00 00 00 00 00  ................
+     00000014ca8ff790 b0 03 00 00 00 00 00 00 b4 03 00 00 00 00 00 00  ................
+     00000014ca8ff7a0 a3 4a 74 12 b0 68 00 00 0c b1 ed 2d fd 7f 00 00  .Jt..h.....-....
+    Possible instruction pointers:
+
+23  combase.dll + 0xcb10c
+    rsp = 0x00000014ca8ff7b0   rip = 0x00007ffd2dedb10c
+    Found by: stack scanning
+
+    Stack contents:
+     00000014ca8ff7b0 00 00 00 00 00 00 00 00 00 88 01 4a 16 01 00 00  ...........J....
+     00000014ca8ff7c0 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000014ca8ff7d0 b8 03 00 00 00 00 00 00 c0 d1 ed 2d fd 7f 00 00  ...........-....
+    Possible instruction pointers:
+
+24  combase.dll + 0xcd1c0
+    rsp = 0x00000014ca8ff7e0   rip = 0x00007ffd2dedd1c0
+    Found by: stack scanning
+
+    Stack contents:
+     00000014ca8ff7e0 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000014ca8ff7f0 00 6e 83 4e 16 01 00 00 5d 19 e3 2d fd 7f 00 00  .n.N....]..-....
+    Possible instruction pointers:
+
+25  combase.dll + 0x2195d
+    rsp = 0x00000014ca8ff800   rip = 0x00007ffd2de3195d
+    Found by: stack scanning
+
+    Stack contents:
+     00000014ca8ff800 a0 0f 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000014ca8ff810 30 f8 8f ca 14 00 00 00 08 3a 00 00 00 00 00 00  0........:......
+     00000014ca8ff820 a0 88 01 4a 16 01 00 00 d0 cf ed 2d fd 7f 00 00  ...J.......-....
+    Possible instruction pointers:
+
+26  combase.dll + 0xccfd0
+    rsp = 0x00000014ca8ff830   rip = 0x00007ffd2dedcfd0
+    Found by: stack scanning
+
+    Stack contents:
+     00000014ca8ff830 ff ff ff ff 16 01 00 00 a0 88 01 4a 16 01 00 00  ...........J....
+     00000014ca8ff840 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000014ca8ff850 a0 88 01 4a 16 01 00 00 c6 d3 ed 2d fd 7f 00 00  ...J.......-....
+    Possible instruction pointers:
+
+27  combase.dll + 0xcd3c6
+    rsp = 0x00000014ca8ff860   rip = 0x00007ffd2dedd3c6
+    Found by: stack scanning
+
+    Stack contents:
+     00000014ca8ff860 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000014ca8ff870 00 00 00 00 00 00 00 00 a0 88 01 4a 16 01 00 00  ...........J....
+     00000014ca8ff880 00 00 00 00 00 00 00 00 59 cf ed 2d fd 7f 00 00  ........Y..-....
+    Possible instruction pointers:
+
+28  combase.dll + 0xccf59
+    rsp = 0x00000014ca8ff890   rip = 0x00007ffd2dedcf59
+    Found by: stack scanning
+
+    Stack contents:
+     00000014ca8ff890 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000014ca8ff8a0 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000014ca8ff8b0 00 00 00 00 00 00 00 00 74 73 8c 2d fd 7f 00 00  ........ts.-....
+    Possible instruction pointers:
+
+29  kernel32.dll + 0x17374
+    rsp = 0x00000014ca8ff8c0   rip = 0x00007ffd2d8c7374
+    Found by: stack scanning
+
+    Stack contents:
+     00000014ca8ff8c0 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000014ca8ff8d0 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000014ca8ff8e0 00 00 00 00 00 00 00 00 91 cc 4d 2e fd 7f 00 00  ..........M.....
+    Possible instruction pointers:
+
+30  ntdll.dll + 0x4cc91
+    rsp = 0x00000014ca8ff8f0   rip = 0x00007ffd2e4dcc91
+    Found by: stack scanning
+
+Thread 9
+ 0  ntdll.dll + 0xa0ff4
+    rax = 0x00000000000001d5   rdx = 0x000001164a0025b0
+    rcx = 0x00000000000002bc   rbx = 0x000001164a002930
+    rsi = 0x0000011649fa06a0   rdi = 0x000001164a002930
+    rbp = 0x0000000000000000   rsp = 0x00000014ca9ff658
+     r8 = 0x0000000000000000    r9 = 0x0000000000000009
+    r10 = 0x0000000000000000   r11 = 0xa400000000000007
+    r12 = 0x0000000000000000   r13 = 0x0000000000000000
+    r14 = 0x0000000000000000   r15 = 0x0000000000000000
+    rip = 0x00007ffd2e530ff4
+    Found by: given as instruction pointer in context
+
+    Stack contents:
+     00000014ca9ff658 07 d4 4d 2e fd 7f 00 00                          ..M.....        
+    Possible instruction pointers:
+
+ 1  ntdll.dll + 0x4d407
+    rsp = 0x00000014ca9ff660   rip = 0x00007ffd2e4dd407
+    Found by: stack scanning
+
+Thread 10
+ 0  ntdll.dll + 0xa0ff4
+    rax = 0x00000000000001d5   rdx = 0x000001164e770a10
+    rcx = 0x00000000000002bc   rbx = 0x0000000000000000
+    rsi = 0x0000011649fa06a0   rdi = 0x0000000000000000
+    rbp = 0x0000000000000000   rsp = 0x00000014caaff568
+     r8 = 0x0000000000000000    r9 = 0x0000000000000000
+    r10 = 0x0000000000000000   r11 = 0x0000000000000000
+    r12 = 0x0000000000000000   r13 = 0x0000000000000000
+    r14 = 0x0000000000000000   r15 = 0x0000000000000000
+    rip = 0x00007ffd2e530ff4
+    Found by: given as instruction pointer in context
+
+    Stack contents:
+     00000014caaff568 07 d4 4d 2e fd 7f 00 00                          ..M.....        
+    Possible instruction pointers:
+
+ 1  ntdll.dll + 0x4d407
+    rsp = 0x00000014caaff570   rip = 0x00007ffd2e4dd407
+    Found by: stack scanning
+
+Thread 11
+ 0  ntdll.dll + 0x9e0b4
+    rax = 0x000000000000005b   rdx = 0x00000014cabff9b0
+    rcx = 0x0000000000000002   rbx = 0x00007ffd16afcf40
+    rsi = 0x0000000000000010   rdi = 0x000000007ffe0010
+    rbp = 0x00007ffd16afcf40   rsp = 0x00000014cabff8f8
+     r8 = 0x0000000000000000    r9 = 0x0000000000000000
+    r10 = 0x0000000000000000   r11 = 0x0000000000000000
+    r12 = 0x000000007ffe000c   r13 = 0x000000007ffe0008
+    r14 = 0x0000000000000000   r15 = 0x0000000000000000
+    rip = 0x00007ffd2e52e0b4
+    Found by: given as instruction pointer in context
+
+    Stack contents:
+     00000014cabff8f8 51 27 ae 16 fd 7f 00 00                          Q'......        
+    Possible instruction pointers:
+
+ 1  winmm.dll + 0x2751
+    rbp = 0x00007ffd16afcf40   rsp = 0x00000014cabff900
+    rip = 0x00007ffd16ae2751
+    Found by: stack scanning
+
+    Stack contents:
+     00000014cabff900 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000014cabff910 40 cf af 16 fd 7f 00 00                          @.......        
+    Possible instruction pointers:
+
+ 2  winmm.dll + 0x1cf40
+    rbp = 0x00007ffd16afcf40   rsp = 0x00000014cabff918
+    rip = 0x00007ffd16afcf40
+    Found by: stack scanning
+
+Thread 12
+ 0  win32u.dll + 0x1ec4
+    rax = 0x0000000000001074   rdx = 0x00000014cacfc738
+    rcx = 0x0000000000000000   rbx = 0x0000000000000000
+    rsi = 0x0000000000000000   rdi = 0x00000014cacfc738
+    rbp = 0x00000014cacfc3e0   rsp = 0x00000014cacfc2c8
+     r8 = 0x0000000000000008    r9 = 0x0000000000000010
+    r10 = 0x0000000000000124   r11 = 0x0000000000000003
+    r12 = 0x0000000040000000   r13 = 0x0000000000000000
+    r14 = 0x00000014cacfc3e0   r15 = 0x0000000000000000
+    rip = 0x00007ffd2bee1ec4
+    Found by: given as instruction pointer in context
+
+    Stack contents:
+     00000014cacfc2c8 bb 77 bb 2d fd 7f 00 00                          .w.-....        
+    Possible instruction pointers:
+
+ 1  user32.dll + 0x77bb
+    rbp = 0x00000014cacfc3e0   rsp = 0x00000014cacfc2d0
+    rip = 0x00007ffd2dbb77bb
+    Found by: stack scanning
+
+Thread 13
+ 0  ntdll.dll + 0x9d5e4
+    rax = 0x0000000000000004   rdx = 0x0000000000000000
+    rcx = 0x0000000000000038   rbx = 0x00007ffd2e5fc3f0
+    rsi = 0x00000014c9e86000   rdi = 0x0000000000000000
+    rbp = 0x0000000000000001   rsp = 0x00000014cadff6a8
+     r8 = 0x0000000000000000    r9 = 0x0000000000000000
+    r10 = 0x0000000000000000   r11 = 0x0000000000000000
+    r12 = 0x00007ffd2e5fc3f0   r13 = 0x00000014cadff8f0
+    r14 = 0x0000000000000038   r15 = 0x00000014c9ea5000
+    rip = 0x00007ffd2e52d5e4
+    Found by: given as instruction pointer in context
+
+    Stack contents:
+     00000014cadff6a8 32 00 4f 2e fd 7f 00 00                          2.O.....        
+    Possible instruction pointers:
+
+ 1  ntdll.dll + 0x60032
+    rsp = 0x00000014cadff6b0   rip = 0x00007ffd2e4f0032
+    Found by: stack scanning
+
+    Stack contents:
+     00000014cadff6b0 00 50 ea c9 14 00 00 00 00 00 00 00 00 00 00 00  .P..............
+     00000014cadff6c0 f0 c3 5f 2e fd 7f 00 00                          .._.....        
+    Possible instruction pointers:
+
+ 2  ntdll.dll + 0x16c3f0
+    rsp = 0x00000014cadff6c8   rip = 0x00007ffd2e5fc3f0
+    Found by: stack scanning
+
+    Stack contents:
+     00000014cadff6c8 00 60 e8 c9 14 00 00 00 00 00 00 00 00 00 00 00  .`..............
+     00000014cadff6d8 00 20 00 00 00 00 00 00 00 00 00 00 00 00 00 00  . ..............
+     00000014cadff6e8 c3 77 4a 2e fd 7f 00 00                          .wJ.....        
+    Possible instruction pointers:
+
+ 3  ntdll.dll + 0x177c3
+    rsp = 0x00000014cadff6f0   rip = 0x00007ffd2e4a77c3
+    Found by: stack scanning
+
+    Stack contents:
+     00000014cadff6f0 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000014cadff700 00 60 e8 c9 14 00 00 00 0f 00 00 00 00 00 00 00  .`..............
+     00000014cadff710 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000014cadff720 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000014cadff730 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000014cadff740 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000014cadff750 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000014cadff760 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000014cadff770 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000014cadff780 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000014cadff790 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000014cadff7a0 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000014cadff7b0 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000014cadff7c0 00 60 e8 c9 14 00 00 00 a4 60 50 2e fd 7f 00 00  .`.......`P.....
+    Possible instruction pointers:
+
+ 4  ntdll.dll + 0x760a4
+    rsp = 0x00000014cadff7d0   rip = 0x00007ffd2e5060a4
+    Found by: stack scanning
+
+    Stack contents:
+     00000014cadff7d0 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000014cadff7e0 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000014cadff7f0 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000014cadff800 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000014cadff810 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000014cadff820 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000014cadff830 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000014cadff840 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000014cadff850 f0 f8 df ca 14 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000014cadff860 00 00 49 2e fd 7f 00 00 83 5c 50 2e fd 7f 00 00  ..I......\P.....
+    Possible instruction pointers:
+
+ 5  ntdll.dll + 0x75c83
+    rsp = 0x00000014cadff870   rip = 0x00007ffd2e505c83
+    Found by: stack scanning
+
+    Stack contents:
+     00000014cadff870 00 00 00 00 00 00 00 00 00 00 49 2e fd 7f 00 00  ..........I.....
+     00000014cadff880 00 00 00 00 00 00 00 00 00 50 ea c9 14 00 00 00  .........P......
+     00000014cadff890 00 00 00 00 00 00 00 00 2e 5c 50 2e fd 7f 00 00  .........\P.....
+    Possible instruction pointers:
+
+ 6  ntdll.dll + 0x75c2e
+    rsp = 0x00000014cadff8a0   rip = 0x00007ffd2e505c2e
+    Found by: stack scanning
+
+    Stack contents:
+     00000014cadff8a0 f0 f8 df ca 14 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000014cadff8b0 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000014cadff8c0 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000014cadff8d0 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000014cadff8e0 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000014cadff8f0 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000014cadff900 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000014cadff910 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000014cadff920 1b 00 10 00 80 1f 00 00 33 00 00 00 00 00 00 00  ........3.......
+     00000014cadff930 00 00 2b 00 00 02 00 00 00 00 00 00 00 00 00 00  ..+.............
+     00000014cadff940 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000014cadff950 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000014cadff960 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000014cadff970 70 5d f3 ac fc 7f 00 00                          p]......        
+    Possible instruction pointers:
+
+ 7  Qt5Core.dll + 0x25d70
+    rsp = 0x00000014cadff978   rip = 0x00007ffcacf35d70
+    Found by: stack scanning
+
+    Stack contents:
+     00000014cadff978 48 af 0f ca 14 00 00 00 00 00 00 00 00 00 00 00  H...............
+     00000014cadff988 e8 fd df ca 14 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000014cadff998 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000014cadff9a8 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000014cadff9b8 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000014cadff9c8 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000014cadff9d8 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000014cadff9e8 70 cc 4d 2e fd 7f 00 00                          p.M.....        
+    Possible instruction pointers:
+
+ 8  ntdll.dll + 0x4cc70
+    rsp = 0x00000014cadff9f0   rip = 0x00007ffd2e4dcc70
+    Found by: stack scanning
+
+Loaded modules:
+0x1164a0b0000 - 0x1164a15cfff  SHCore.dll  10.0.19041.4522
+0x1164e850000 - 0x1164e8b8fff  wintrust.dll  10.0.19041.4597
+0x7ff6fade0000 - 0x7ff6fae12fff  crashpadReporterExample.exe  ???  (main)  (WARNING: No symbols, crashpadReporterExample.pdb, 506E1250BCEE48C1807A06E7A3A4EB518)
+0x7ffca9be0000 - 0x7ffcaa29afff  Qt5Gui.dll  5.15.2.0  (WARNING: No symbols, Qt5Gui.pdb, B9BF1F54552D43FA942F1A753D892E8F1)
+0x7ffcacf10000 - 0x7ffcad4d5fff  Qt5Core.dll  5.15.2.0  (WARNING: No symbols, Qt5Core.pdb, 3F04C67A012B43E395533C3A7E3358891)
+0x7ffcafaf0000 - 0x7ffcb0030fff  Qt5Widgets.dll  5.15.2.0  (WARNING: No symbols, Qt5Widgets.pdb, B55E00034D784710A266E5590C2A6AB61)
+0x7ffcccc40000 - 0x7ffccce0ffff  d3d9.dll  10.0.19041.4597
+0x7ffcce4b0000 - 0x7ffcce61cfff  qwindows.dll  5.15.2.0  (WARNING: No symbols, qwindows.pdb, 7EA3E8B92968441C87182EBCDBB0915C1)
+0x7ffcf3100000 - 0x7ffcf313dfff  dataexchange.dll  10.0.19041.4355
+0x7ffcf92d0000 - 0x7ffcf92f5fff  qwindowsvistastyle.dll  5.15.2.0
+0x7ffd0d2e0000 - 0x7ffd0d36dfff  msvcp140.dll  14.36.32532.0
+0x7ffd0e480000 - 0x7ffd0e498fff  netapi32.dll  10.0.19041.3636
+0x7ffd0e4b0000 - 0x7ffd0e4bbfff  VCRUNTIME140_1.dll  14.36.32532.0
+0x7ffd0e4d0000 - 0x7ffd0e4eafff  VCRUNTIME140.dll  14.36.32532.0
+0x7ffd11ae0000 - 0x7ffd11ae8fff  MSVCP140_1.dll  14.36.32532.0
+0x7ffd14fe0000 - 0x7ffd1525efff  DWrite.dll  10.0.19041.4355
+0x7ffd15e00000 - 0x7ffd15e27fff  srvcli.dll  10.0.19041.3636
+0x7ffd16ae0000 - 0x7ffd16b06fff  winmm.dll  10.0.19041.3636  (WARNING: No symbols, winmm.pdb, 8D40E7A52F1C62DF7F80732B0CD76AD81)
+0x7ffd1f200000 - 0x7ffd1f230fff  cryptnet.dll  10.0.19041.3636
+0x7ffd1f650000 - 0x7ffd1f748fff  textinputframework.dll  10.0.19041.4651
+0x7ffd234b0000 - 0x7ffd236b2fff  twinapi.appcore.dll  10.0.19041.4597
+0x7ffd25a60000 - 0x7ffd25a69fff  version.dll  10.0.19041.3636
+0x7ffd25f20000 - 0x7ffd25f33fff  wtsapi32.dll  10.0.19041.3636
+0x7ffd26100000 - 0x7ffd2611cfff  mpr.dll  10.0.19041.3636
+0x7ffd26820000 - 0x7ffd26a82fff  d3d11.dll  10.0.19041.4355
+0x7ffd271c0000 - 0x7ffd2751afff  CoreUIComponents.dll  10.0.19041.3636
+0x7ffd27520000 - 0x7ffd27703fff  dcomp.dll  10.0.19041.4597
+0x7ffd27720000 - 0x7ffd27811fff  CoreMessaging.dll  10.0.19041.4355  (WARNING: No symbols, CoreMessaging.pdb, 494EAE14850CE3CC29BE486C28694D451)
+0x7ffd28490000 - 0x7ffd285e6fff  WinTypes.dll  10.0.19041.4355
+0x7ffd29150000 - 0x7ffd291edfff  uxtheme.dll  10.0.19041.4529
+0x7ffd29420000 - 0x7ffd2944efff  dwmapi.dll  10.0.19041.4355
+0x7ffd298d0000 - 0x7ffd2a06dfff  windows.storage.dll  10.0.19041.4648
+0x7ffd2a2f0000 - 0x7ffd2a301fff  kernel.appcore.dll  10.0.19041.3758
+0x7ffd2a310000 - 0x7ffd2a404fff  dxgi.dll  10.0.19041.4597
+0x7ffd2aac0000 - 0x7ffd2aaf3fff  rsaenh.dll  10.0.19041.3636
+0x7ffd2abe0000 - 0x7ffd2ac12fff  ntmarta.dll  10.0.19041.3636
+0x7ffd2af90000 - 0x7ffd2afa1fff  umpdc.dll  ???
+0x7ffd2b000000 - 0x7ffd2b00bfff  netutils.dll  10.0.19041.3636
+0x7ffd2b020000 - 0x7ffd2b06afff  powrprof.dll  10.0.19041.3636
+0x7ffd2b380000 - 0x7ffd2b38bfff  CRYPTBASE.DLL  10.0.19041.3636
+0x7ffd2b410000 - 0x7ffd2b43dfff  wldp.dll  10.0.19041.4597
+0x7ffd2b450000 - 0x7ffd2b467fff  cryptsp.dll  10.0.19041.3636
+0x7ffd2b680000 - 0x7ffd2b691fff  msasn1.dll  10.0.19041.3636
+0x7ffd2b9b0000 - 0x7ffd2b9ddfff  userenv.dll  10.0.19041.4355
+0x7ffd2ba00000 - 0x7ffd2ba23fff  profapi.dll  10.0.19041.4355
+0x7ffd2bad0000 - 0x7ffd2bb3dfff  dtrampo.dll  4.0.0.0  (WARNING: No symbols, dtrampo-x64.pdb, 96AFD0B172BB43608DB3A7CDCEC1B1EA1)
+0x7ffd2bbb0000 - 0x7ffd2bbd6fff  bcrypt.dll  10.0.19041.3636
+0x7ffd2bbe0000 - 0x7ffd2bed5fff  KERNELBASE.dll  10.0.19041.4648  (WARNING: No symbols, kernelbase.pdb, FD00366E659CCAC64FA32290CA0C38AA1)
+0x7ffd2bee0000 - 0x7ffd2bf01fff  win32u.dll  10.0.19041.4648  (WARNING: No symbols, win32u.pdb, 81FA8AA54C62B940172A87110CE2238A1)
+0x7ffd2bf10000 - 0x7ffd2c06dfff  crypt32.dll  10.0.19041.4597
+0x7ffd2c070000 - 0x7ffd2c0f1fff  bcryptPrimitives.dll  10.0.19041.3636
+0x7ffd2c100000 - 0x7ffd2c19cfff  msvcp_win.dll  10.0.19041.3636
+0x7ffd2c1f0000 - 0x7ffd2c306fff  gdi32full.dll  10.0.19041.4474
+0x7ffd2c3c0000 - 0x7ffd2c4bffff  ucrtbase.dll  10.0.19041.3636  (WARNING: No symbols, ucrtbase.pdb, 5C4F64BF99F5FDEC7295CAB05A30010D1)
+0x7ffd2c620000 - 0x7ffd2c733fff  msctf.dll  10.0.19041.4597  (WARNING: No symbols, msctf.pdb, AEB43A8194CEF45010F716CEC85410F41)
+0x7ffd2c750000 - 0x7ffd2c872fff  rpcrt4.dll  10.0.19041.4597
+0x7ffd2c880000 - 0x7ffd2c91dfff  msvcrt.dll  7.0.19041.3636  (WARNING: No symbols, msvcrt.pdb, CD5F2A5BD01C905AC199F6190927CDF91)
+0x7ffd2c980000 - 0x7ffd2ca28fff  clbcatq.dll  2001.12.10941.16384
+0x7ffd2ca30000 - 0x7ffd2d19bfff  shell32.dll  10.0.19041.4648
+0x7ffd2d200000 - 0x7ffd2d21cfff  imagehlp.dll  10.0.19041.3636
+0x7ffd2d220000 - 0x7ffd2d2ecfff  oleaut32.dll  10.0.19041.3636
+0x7ffd2d310000 - 0x7ffd2d43afff  ole32.dll  10.0.19041.4355
+0x7ffd2d8b0000 - 0x7ffd2d970fff  kernel32.dll  10.0.19041.4597  (WARNING: No symbols, kernel32.pdb, 396B53214FBEC11DC2AC82E86F6D8DAA1)
+0x7ffd2da30000 - 0x7ffd2da5efff  imm32.dll  10.0.19041.4474
+0x7ffd2da60000 - 0x7ffd2db0ffff  advapi32.dll  10.0.19041.4597
+0x7ffd2db10000 - 0x7ffd2dbaffff  sechost.dll  10.0.19041.4597
+0x7ffd2dbb0000 - 0x7ffd2dd4efff  user32.dll  10.0.19041.4474  (WARNING: No symbols, user32.pdb, 6A873A25D8694F8ABBCFAC114793DAAE1)
+0x7ffd2dd50000 - 0x7ffd2dda4fff  shlwapi.dll  10.0.19041.4355
+0x7ffd2de10000 - 0x7ffd2e162fff  combase.dll  10.0.19041.4355  (WARNING: No symbols, combase.pdb, 6C146F310D333559974D1D5D3FA2E4DA1)
+0x7ffd2e170000 - 0x7ffd2e1dafff  ws2_32.dll  10.0.19041.3636
+0x7ffd2e420000 - 0x7ffd2e44afff  gdi32.dll  10.0.19041.4474
+0x7ffd2e490000 - 0x7ffd2e687fff  ntdll.dll  10.0.19041.4522  (WARNING: No symbols, ntdll.pdb, 4C328D42D0B9A2B218FB85860DECF27C1)

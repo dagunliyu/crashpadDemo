@@ -1,0 +1,56 @@
+
+cmake_minimum_required(VERSION 3.18)
+
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++17")
+
+project(crashpadDemo)
+
+# ext cmake
+include(cMake/InitBuildOption.cmake)
+include(cMake/SetGlobalCompilerAndLinkerSettings.cmake)
+include(cMake/FindCrashPad.cmake)
+
+# exe macro
+InitBuildOptions()
+SetGlobalCompilerAndLinkerSettings()
+
+# find_package(CrashPad)
+
+include_directories(
+    ${CRASHPAD_INCLUDE_DIR}
+)
+
+if(NOT CMAKE_BUILD_TYPE)
+  set(CMAKE_BUILD_TYPE Release)
+#   Debug
+endif()
+
+set(targetNames
+    crashpademo1
+)
+
+add_executable(crashpademo1 crashpademo1.cpp)
+
+###### method1 ######
+foreach(target_Name ${targetNames})
+    message(STATUS "target_Name = ${target_Name}")
+    message(STATUS CMAKE_BUILD_TYPE = ${CMAKE_BUILD_TYPE})
+    if (${CMAKE_BUILD_TYPE} MATCHES "Debug")
+        message(STATUS "This is a Debug build.")
+        target_link_directories(${target_Name} PUBLIC
+            ${CRASHPAD_DEBUG_LIBRARY_DIR}
+        )
+        add_definitions(-DDebug)
+        target_link_libraries(${target_Name} ${CRASHPAD_DEBUG_LIBRARIES})
+    elseif (${CMAKE_BUILD_TYPE} MATCHES "Release")
+        message(STATUS "This is a Release build.")
+        # link_directories(
+        #     ${CRASHPAD_RELEASE_LIBRARY_DIR}
+        # )
+        target_link_directories(${target_Name} PUBLIC
+            ${CRASHPAD_RELEASE_LIBRARY_DIR}
+        )
+        target_link_libraries(${target_Name} ${CRASHPAD_RELEASE_LIBRARIES})
+    endif()
+endforeach()

@@ -1,0 +1,43 @@
+
+cmake_minimum_required(VERSION 3.18)
+
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++17")
+
+project(crashpadDemo)
+
+# ext cmake
+include(cMake/InitBuildOption.cmake)
+include(cMake/SetGlobalCompilerAndLinkerSettings.cmake)
+include(cMake/FindCrashPad.cmake)
+
+# exe macro
+InitBuildOptions()
+SetGlobalCompilerAndLinkerSettings()
+
+
+set(CRASHPAD_INC_PATH ${CMAKE_CURRENT_SOURCE_DIR}/thirdParty/crashpad/include)
+set(CRASHPAD_STATICLIB_PATH 
+    ${CMAKE_CURRENT_SOURCE_DIR}/thirdParty/crashpad/lib/win64)
+
+include_directories(
+    ${CRASHPAD_INCLUDE_DIR}
+)
+
+link_directories(
+    ${CRASHPAD_LIBRARY_DIR}
+)
+
+set(targetNames
+    crashpademo1
+)
+
+add_executable(crashpademo1 crashpademo1.cpp)
+
+###### method1 ######
+foreach(target_Name ${targetNames})
+    message(STATUS "target_Name = ${target_Name}") 
+    target_link_libraries(${target_Name}
+        ${CRASHPAD_LIBRARIES}
+    )
+endforeach()

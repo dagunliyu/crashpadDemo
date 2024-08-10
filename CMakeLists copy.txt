@@ -1,0 +1,102 @@
+
+cmake_minimum_required(VERSION 3.18)
+
+project(crashpadDemo)
+
+# ext cmake
+include(cMake/InitBuildOption.cmake)
+include(cMake/SetGlobalCompilerAndLinkerSettings.cmake)
+
+# exe macro
+InitBuildOptions()
+SetGlobalCompilerAndLinkerSettings()
+
+
+set(CRASHPAD_INC_PATH ${CMAKE_CURRENT_SOURCE_DIR}/thirdParty/crashpad/include)
+set(CRASHPAD_STATICLIB_PATH 
+    ${CMAKE_CURRENT_SOURCE_DIR}/thirdParty/crashpad/lib/win64)
+# set(BREAKPAD_SRC_PATH ${CMAKE_CURRENT_SOURCE_DIR}/../../breakpad/src)
+# set(BREAKPAD_STATICLIB_DEBUG_PATH 
+#     ${CMAKE_CURRENT_SOURCE_DIR}/thirdParty/breakpad/lib/Debug)
+# set(BREAKPAD_STATICLIB_RELEASE_PATH 
+#     ${CMAKE_CURRENT_SOURCE_DIR}/thirdParty/breakpad/lib/Release)
+
+include_directories(
+    ${CRASHPAD_INC_PATH}
+    ${CRASHPAD_INC_PATH}/mini_chromium/mini_chromium
+)
+
+link_directories(
+    ${CRASHPAD_STATICLIB_PATH}
+)
+
+# # STREQUAL wrong?
+# if (${CMAKE_BUILD_TYPE} MATCHES "Debug")
+#     message(STATUS "This is a Debug build.")
+#     link_directories(
+#         ${BREAKPAD_STATICLIB_DEBUG_PATH}
+#     )
+#     add_definitions(-DDebug)
+# else(${CMAKE_BUILD_TYPE} MATCHES "Release")
+#     message(STATUS "This is a Release build.")
+#     link_directories(
+#         ${BREAKPAD_STATICLIB_RELEASE_PATH}
+#     )
+#     # 可以在这里添加特定于 Release 构建类型的优化选项
+#     # add_definitions(-DDebug -O3)
+# # else()
+# #     message(WARNING "Unsupported build type '${CMAKE_BUILD_TYPE}'.")
+# endif()
+
+set(targetNames
+    crashpademo1
+)
+
+add_executable(crashpademo1 crashpademo1.cpp)
+
+###### method1 ######
+# foreach(target_Name ${targetNames})
+#     message(STATUS "target_Name = ${target_Name}") 
+#     target_link_libraries(${target_Name}
+#        optimized base.lib
+#        optimized client.lib
+#        optimized handler.lib
+#        optimized util.lib
+# 
+#        debug based.lib
+#        debug clientd.lib
+#        debug handler.lib
+#        debug utild.lib
+#     )
+# endforeach()
+
+###### method2 ######
+# CRASHPAD_LIBS_DEBUG 和 CRASHPAD_LIBS_RELEASE 为先前检索生成的库文件列表
+set(CRASHPAD_STATIC_LIBS_DEBUG
+    based.lib
+    clientd.lib
+    handler.lib
+    utild.lib
+)
+
+set(CRASHPAD_STATIC_LIBS_RELEASE
+    base.lib
+    client.lib
+    handler.lib
+    util.lib
+)
+
+foreach(target_Name ${targetNames})
+    message(STATUS "target_Name = ${target_Name}") 
+    # debug
+    foreach(lib_dbg_name IN LISTS CRASHPAD_STATIC_LIBS_DEBUG)
+        message(STATUS "target_Name = ${target_Name}, lib_dbg_name = ${lib_dbg_name}") 
+        target_link_libraries(${target_Name} debug ${lib_dbg_name})
+    endforeach(lib_dbg_name)
+
+    #release    
+    foreach(lib_rel_name IN LISTS CRASHPAD_STATIC_LIBS_RELEASE)
+        message(STATUS "target_Name = ${target_Name}, lib_rel_name = ${lib_rel_name}") 
+        target_link_libraries(${target_Name} optimized ${lib_rel_name})
+    endforeach(lib_rel_name)
+endforeach(target_Name)
