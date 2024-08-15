@@ -6,6 +6,10 @@ cmake_minimum_required(VERSION 3.18)
 
 project(crashpadDemo)
 
+if(NOT CMAKE_BUILD_TYPE)
+  set(CMAKE_BUILD_TYPE Debug) # Debug Release
+endif()
+
 # ext cmake
 include(cMake/InitBuildOption.cmake)
 include(cMake/SetGlobalCompilerAndLinkerSettings.cmake)
@@ -49,8 +53,8 @@ target_link_directories(cpHandlerDemo PUBLIC
     ${CRASHPAD_LIBRARY_DIR}
     ${CMAKE_CURRENT_BINARY_DIR}/crashpadHandler/Release # libs can be moved to target-dir through IBE_INSTALL
     ${CMAKE_CURRENT_BINARY_DIR}/crashpadHandler/Debug
-    ${CMAKE_CURRENT_BINARY_DIR}/cpHalper/Release
-    ${CMAKE_CURRENT_BINARY_DIR}/cpHalper/Debug
+    ${CMAKE_CURRENT_BINARY_DIR}/util/Release
+    ${CMAKE_CURRENT_BINARY_DIR}/util/Debug
 )
 target_link_libraries(cpHandlerDemo
     ${CRASHPAD_LIBRARIES}
@@ -79,3 +83,23 @@ foreach(target_Name ${targetNames})
         ${CRASHPAD_LIBRARIES}
     )
 endforeach()
+
+
+# define in main repo
+set(SELECTED_OPTION_COUNT 0 CACHE INTERNAL "counter for selected")
+# add_subdirectory(data)
+# add_subdirectory(src)
+
+# define in plugins
+function(add_project_count)
+    set(current_count ${SELECTED_OPTION_COUNT} CACHE INTERNAL "")
+    math(EXPR current_count "${current_count} + 1")
+    set(SELECTED_OPTION_COUNT ${current_count} CACHE INTERNAL "counter for selected")
+endfunction()
+
+# define in main repo
+# if(SELECTED_OPTION_COUNT greater 1)
+#     message(fatal_error )
+# else()
+#     message("a valid option selected")
+# endif()

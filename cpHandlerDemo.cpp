@@ -117,7 +117,7 @@ void unexception_error_handler()
 	std::cerr << "unexpected error occured..." << std::endl;
 }
 
-void initExceptionHandler()
+void InstallExceptionHandler()
 {
 	// install our own handler
 #ifdef _MSC_VER
@@ -145,33 +145,35 @@ void initExceptionHandler()
 
 int main()
 { 
-	initExceptionHandler();
+	InstallExceptionHandler();
 
-    //std::cout << "当前程序路径：" << path << std::endl;
     std::cout << "Hello World!\n";
 	//QString appDirPath = QCoreApplication::applicationDirPath();
 	//QString dbPath = appDirPath + "/database";
 	//QString dmpPath = appDirPath + "/database/reports";//+ "/database/reports";
 	//QString handlerPath = "D:/Projects/Proj_Basic_proj/build_cp/cp_cxx14/crashpad/x64/release/crashpad_handler.exe";
+	//handlerPath.toStdWString();
 
 	std::string appDir = GetExecutablePath();
 	std::string dmpDir = appDir + "\\database\\reports";
 	std::string dbPath = appDir + "\\database";
 	std::wstring dbDir = string_to_wstring(dbPath);// = dbPath.toStdWString();
-	std::wstring handlerDir = L"C:/Users/ibe/Projects/Proj_Basic_proj/build_cp_cxx14/cp_cxx14-240806/crashpad/x64/release/crashpad_handler.exe";
-	// handlerPath.toStdWString();
-	//L"D:/Projects/Proj_Basic_proj/build_cp/cp_cxx14/crashpad/x64/release/crashpad_handler.exe"
-	//L"C:/Users/ibe/Projects/Proj_Basic_proj/build_cp_cxx14/cp_cxx14-240806/crashpad/x64/release/crashpad_handler.exe"
+
+	std::cout << "当前程序路径 %s：\n" << appDir << std::endl;
+
+#ifdef _DEBUG
+	std::wstring handlerDir = L"C:/Users/ibe/Projects/Proj_Basic_proj/build_cp_cxx14-v140-240809/cp_cxx14/crashpad/x64/release/crashpad_handler.exe";
+#else
+	std::wstring handlerDir = L"C:/Users/ibe/Projects/Proj_Basic_proj/build_cp_cxx14-v140-240809/cp_cxx14/crashpad/x64/release/crashpad_handler.exe";
+#endif
 
 	crashpadInstance.setDBPath(dbDir)
 		->setHandlerPath(handlerDir)
 		->setDumpPath(dmpDir)
-		->setUploadUrl("http://192.168.24.32:18080/crash/upload_mini_dump")
+		->setUploadUrl("http://172.30.100.21:28080/crash/upload_mini_dump")
 		->initCrashpad();
-	
-	//"http://192.168.24.32:18080/crash/upload_mini_dump"
-	//"http://127.0.0.1:18080/upload_mini_dump"
 
+	//const std::string url("http://172.30.100.21:28080/crash/upload_mini_dump");
 	 
 	try
 	{

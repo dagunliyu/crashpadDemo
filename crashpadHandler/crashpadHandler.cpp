@@ -72,7 +72,12 @@ bool crashpadHandler::initCrashpad()
 	std::map<std::string, std::string> annotations;
 	annotations.emplace("IBEVersionMajor", "5");
 	annotations.emplace("IBEVersionMinor", "0");
-	annotations.emplace("IBEVersionName", "Quantum");
+
+#ifdef _DEBUG
+	annotations.emplace("IBEVersionName", "Test_Debug");
+#else
+	annotations.emplace("IBEVersionName", "Test_Release");
+#endif
 	annotations.emplace("IBEVersionMain", "V2024R1");
 	annotations.emplace("IBEVersionSmall", "C00106.1");
 	annotations.emplace("IBEVersionDate", "0626");

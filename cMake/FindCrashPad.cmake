@@ -4,13 +4,8 @@
 if(WIN32)
     # set(IBE_LIBPACK_DIR $ENV{IBE_LIBPACK_DIR} CACHE PATH  "Directory of the IBE 3rdparty libpack")
     # MESSAGE(STATUS "Found libpack env variable: ${IBE_LIBPACK_DIR}")
-
-    # D:\Projects\Proj_Coding_Alog_Interview_Recruit\Proj_Basic_proj\build_crashpad\crashpad_depot2\crashpad
-    # or
-    # D:\Projects\Proj_Coding_Alog_Interview_Recruit\Proj_Basic_proj\build_crashpad\crashpad_depot\crashpad
-   
-    # D:\Projects\Proj_Basic_proj\build_cp\cp_cxx14\crashpad
-
+    
+    # $ENV{TEST_CRASHPAD_DIR} or ${TEST_CRASHPAD_DIR}
     set(TEST_CRASHPAD_DIR $ENV{TEST_CRASHPAD_DIR} CACHE PATH  "Directory of the IBE 3rdparty libpack")
     MESSAGE(STATUS "Found libpack env variable: ${IBE_LIBPACK_DIR}")
 
@@ -24,17 +19,14 @@ if(WIN32)
         ${TEST_CRASHPAD_DIR}
         ${TEST_CRASHPAD_DIR}/third_party/mini_chromium/mini_chromium
         ${TEST_CRASHPAD_REL_DIR}/gen
-        # /gen/build
-        # ${IBE_LIBPACK_DIR}/crashpad/include
-        # ${IBE_LIBPACK_DIR}/crashpad/include/mini_chromium/mini_chromium)
     )
 
     
     # x64 x86
-    # debug base     x86-t/debug/obj/third_party/mini_chromium/mini_chromium/base
-    # debug client   x86-t/debug/obj/client
-    # debug handler  x86-t/debug/obj/handler
-    # debug util     x86-t/debug/obj/util
+    # debug base     x64/debug/obj/third_party/mini_chromium/mini_chromium/base
+    # debug client   x64/debug/obj/client
+    # debug handler  x64/debug/obj/handler
+    # debug util     x64/debug/obj/util
     set(TEST_CRASHPAD_REL_LIB_DIR
         ${TEST_CRASHPAD_REL_DIR}/obj
     )
@@ -58,7 +50,14 @@ if(WIN32)
     # MESSAGE(STATUS CRASHPAD_LIBRARY_DIR = ${CRASHPAD_LIBRARY_DIR})
     
     if(CRASHPAD_INCLUDE_DIR AND CRASHPAD_REL_LIBRARY_DIR)
-        set(CRASHPAD_LIBRARY_DIR ${CRASHPAD_REL_LIBRARY_DIR})
+        if (${CMAKE_BUILD_TYPE} MATCHES "Debug")
+            set(CRASHPAD_LIBRARY_DIR ${CRASHPAD_DBG_LIBRARY_DIR})
+        endif()
+
+        if (${CMAKE_BUILD_TYPE} MATCHES "Release")
+            set(CRASHPAD_LIBRARY_DIR ${CRASHPAD_REL_LIBRARY_DIR})
+        endif()
+
         set(CRASHPAD_LIBRARIES
             optimized base
             optimized client
